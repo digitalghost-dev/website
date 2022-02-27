@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="{{ url_for('static', filename='script.js') }}"></script>
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
   <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
@@ -145,5 +146,7 @@
             </a>
         </div>
   </div>
+
+  <script src="{{ url_for('static', filename='redgreen.js') }}"></script>
 </body>
 </html>
