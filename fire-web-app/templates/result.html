@@ -65,7 +65,7 @@
         </div>
         <div class="cell" id="inner-cell-1-2">
           <span class="data" style="text-align: center;">
-            <form action="{{ url_for('home') }}" method="post">
+            <form action="{{ url_for('search_page') }}" method="post">
               <input type="text" name="variable" placeholder="search ticker or company" maxlength="4" font-size="24px" onkeypress="return (event.charCode > 64 && 
                 event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" style="text-transform:uppercase">
               <input class="button" type="submit" value="Search">
