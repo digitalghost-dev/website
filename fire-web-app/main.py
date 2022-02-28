@@ -211,8 +211,13 @@ class companySearch:
             return("-")  
  
 
-# Routing to the homepage
-@app.route('/', methods = ["GET", "POST"])
+# Routing to the home page
+@app.route('/')
+def home():
+    return render_template("home.html")
+
+# Routing to the search page
+@app.route('/search', methods = ["GET", "POST"])
 def home():
     if request.method == "POST":
         variable = request.form["variable"]
@@ -241,7 +246,7 @@ def home():
         nasdaq_change=nasdaq_change)
 
 # Routing to the result page
-@app.route('/result/<variable>')
+@app.route('/search/result/<variable>')
 def ticker_result(variable):
     dow_jones_value = MarketIndices().DowJonesIndex()
     dow_jones_percent = MarketIndices().DowJonesPercent()
