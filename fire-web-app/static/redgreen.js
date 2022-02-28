@@ -3,7 +3,7 @@ $('.percentChange').each(function(){
     var cellValue = $(this).html();
     if(!isNaN(parseFloat(cellValue))) {
       if (cellValue <= 0) {
-        $(this).css('background-color','red');
+        $(this).css('color','red');
       } 
       
       if(cellValue >= 0.001){
