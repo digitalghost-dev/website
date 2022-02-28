@@ -3,7 +3,7 @@
     border-color: rgba(108, 117, 125, 0.5);
     bottom: 0;
     height: 20%;
-    position: absolute;
+    position: relative;
 }
 
 .footer-text {
