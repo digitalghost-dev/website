@@ -1,9 +1,10 @@
 .footer {
     border-top-style: dashed;
     border-color: rgba(108, 117, 125, 0.5);
-    bottom: 0;
+    bottom: 0px;
     height: 20%;
-    position: relative;
+    position: absolute;
+    width: 100%;
 }
 
 .footer-text {
