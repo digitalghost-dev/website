@@ -8,6 +8,9 @@
 
 .popup {
     background-color: #F2F7FF;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 4px;
     width: 350px;
     padding: 30px 40px;
     position: absolute;
