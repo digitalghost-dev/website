@@ -218,7 +218,7 @@ def home():
 
 # Routing to the search page
 @app.route('/search', methods = ["GET", "POST"])
-def home():
+def search_page():
     if request.method == "POST":
         variable = request.form["variable"]
         return redirect(url_for("ticker_result", variable=variable))
