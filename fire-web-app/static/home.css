@@ -158,17 +158,22 @@ ul {
     height: 100%;
 }
   
+.fa-cubes {
+    color: #9D71E8;
+}
+
+.fa-code {
+    color: #9D71E8;
+}
+  
 .fa-chart-line {
-    --fa-primary-color: #B2C9FF;
-    --fa-secondary-color: #9D71E8;
+    color: #9D71E8;
 }
   
 .fa-cloud-check {
-    --fa-primary-color: #F2F7FF;
-    --fa-secondary-color: #9D71E8;
+    color: #9D71E8;
 }
   
-.fa-clock-rotate-left {
-    --fa-primary-color: #B2C9FF;
-    --fa-secondary-color: #9D71E8;
+.fa-xmark {
+    color: #9D71E8;
 }
