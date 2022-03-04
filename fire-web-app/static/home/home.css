@@ -1,5 +1,6 @@
 html, body {
     margin: 0;
+    z-index: -1;
 }
 
 body {
@@ -48,7 +49,7 @@ ul {
 }
   
 .container-2 {
-    padding-bottom: 16px;
+    padding-bottom: 32px;
 }
   
 .container-3 {
@@ -93,6 +94,44 @@ ul {
     justify-content: space-between;
     font-family: Quicksand, sans-serif;
     width: 20%;
+}
+
+@media only screen and (max-width: 1500px) {
+    .box-1 {
+    border-bottom-style: solid;
+    border-color: #B2C9FF;
+    border-width: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Quicksand, sans-serif;
+    width: 25%;
+  }
+  
+    .box-2 {
+      border-bottom-style: solid;
+      border-color: #B2C9FF;
+      border-width: 8px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      font-family: Quicksand, sans-serif;
+      width: 25%;
+    }
+  
+    .box-3 {
+      border-bottom-style: solid;
+      border-color: #B2C9FF;
+      border-width: 8px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      font-family: Quicksand, sans-serif;
+      width: 25%;
+    }
 }
 
 @media only screen and (max-width: 1000px) {
