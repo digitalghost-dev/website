@@ -3,19 +3,8 @@
     border-color: rgba(108, 117, 125, 0.5);
     bottom: 0px;
     height: 20%;
-    position: absolute;
+    /* position: relative; */
     width: 100%;
-}
-
-@media only screen and (max-width: 1150px) {
-    .footer {
-      border-top-style: dashed;
-      border-color: rgba(108, 117, 125, 0.5);
-      bottom: 0;
-      height: 20%;
-      position: relative;
-      width: 100%;
-    }
 }
 
 .footer-text {
@@ -24,7 +13,7 @@
     font-family: Quicksand, sans-serif;
     padding-top: 12px;
     font-size: 12px;
-text-align: center;
+    text-align: center;
 }
 
 .logos {
