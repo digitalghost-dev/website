@@ -4,16 +4,26 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Montserrat|Quicksand">
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='home/home.css') }}">
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='home/home_footer.css') }}">
-    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='floating_buttons.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='floating_button.css') }}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <title>minimalfire.app</title>
   </head>
   <body>
 
-    <a href="https://minimalfire.app/" class="float">
-      <i class="fa-solid fa-bars my-float"></i>
-    </a>
+    <div class="action" onclick="actionToggle();">
+        <span><i class="fa-light fa-chevron-right fa-2xs"></i></span>
+        <ol>
+          <li><a href="https://www.christiansanchez.dev/"><i class="fa-light fa-home my-float"></i>Home</a></li>
+          <li><i class="fa-light fa-chart-line my-float"></i>Stock search tool</li>
+        </ol>
+    </div>
+    <script>
+    function actionToggle(){
+        var action = document.querySelector('.action');
+        action.classList.toggle('active')
+    }
+    </script>
     
     <div class="container-1">
       <i class="fa-duotone fa-fire-flame-curved fa-4x"></i>
@@ -24,7 +34,7 @@
       <h3>This hosts my personal projects as well as information about me. Look around to learn more!</h3>
     </div>
     
-   <h4 style="text-align: center;">Site content<br>Click the menu button in the bottom right with the corresponding icon to view the tool!</h4>
+    <h4 style="text-align: center; padding-bottom: 24px;">Site content</h4>
     <div class="container-3">
       <div class ="box-1">
         <div class="column-1">
@@ -62,7 +72,7 @@
       </div>
     </div>
     
-    <h4 style="text-align: center;">About this site</h4>
+    <h4 style="text-align: center; padding-bottom: 24px;">About this site</h4>
     <div class="container-3">
       <div class ="box-1">
         <div class="column-1">
