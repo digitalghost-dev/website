@@ -34,6 +34,7 @@
 }
   
 .action ol {
+	list-style: none;
 	position: absolute;
 	bottom: 55px;
 	background-color: #fff;
