@@ -19,3 +19,5 @@ The **Jupyter Notebook** file has the following functionlites:
 With creating the web app, I couldn't data scrap my way through it so using [Financial Modeling Prep](https://site.financialmodelingprep.com/developer)'s API, I set out to pull and display the same (eventually more) information about a certain company, just like the **Jupyter Notebook**.
 
 This web app is now taking shape to become my personal website with these features (and more to be added in the future) instead of having two different websites.
+
+Read the wiki
