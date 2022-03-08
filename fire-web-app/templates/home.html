@@ -1,7 +1,8 @@
 <html>
   <head>
+    <link rel="icon" type="image/x-icon" href="https://storage.cloud.google.com/minimalfire-web-app_cloudbuild/favicon/fire-flame-curved-duotone.svg">
     <script src="https://kit.fontawesome.com/84587c6ecd.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Montserrat|Quicksand">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Montserrat|Quicksand|Raleway">
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='home/home.css') }}">
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='home/home_footer.css') }}">
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='floating_button.css') }}">
@@ -15,120 +16,124 @@
         <span><i class="fa-light fa-chevron-right fa-2xs"></i></span>
         <ol>
           <li><a href="https://www.christiansanchez.dev/"><i class="fa-light fa-home my-float"></i>Home</a></li>
-          <li><i class="fa-light fa-chart-line my-float"></i>Stock search tool</li>
+          <li><a href="www.google.com/"><i class="fa-light fa-chart-line my-float"></i>Stock search tool</a></li>
         </ol>
-    </div>
-    <script>
-    function actionToggle(){
-        var action = document.querySelector('.action');
-        action.classList.toggle('active')
-    }
-    </script>
-    
-    <div class="container-1">
-      <i class="fa-duotone fa-fire-flame-curved fa-4x"></i>
-    </div>
-    
-    <div class="container-2">
-      <h2>Welcome to my personal site</h2>
-      <h3>This hosts my personal projects as well as information about me. Look around to learn more!</h3>
-    </div>
-    
-    <h4 style="text-align: center; padding-bottom: 24px;">Site content</h4>
-    <div class="container-3">
-      <div class ="box-1">
-        <div class="column-1">
-          <h4>Financial tools</h4>
-            <ul class="fa-ul">
-              <li><span class="fa-li"><i class="fa-regular fa-check"></i></span>Search for companies and ETFs to view key metric ratios</li>
-            </ul>
-         </div>
-         <div class = "column-2">
-           <i class="fa-light fa-chart-line fa-4x"></i>
-         </div> 
+      </div>
+      <script>
+        function actionToggle(){
+          var action = document.querySelector('.action');
+          action.classList.toggle('active')
+        }
+      </script>
+      
+      <div class="container-1">
+        <i class="fa-duotone fa-fire-flame-curved fa-4x"></i>
       </div>
       
-      <div class ="box-2">
-        <div class="column-1">
-          <h4>Not available</h4>
-            <ul class="fa-ul">
-              <li><span class="fa-li"><i class="fa-regular fa-check"></i></span>Future feature in the works</li>
-            </ul>
-         </div>
-         <div class = "column-2">
-          <i class="fa-regular fa-xmark fa-4x"></i>
-         </div> 
-      </div>
-      <div class ="box-3">
-        <div class="column-1">
-          <h4>Not available</h4>
-            <ul class="fa-ul">
-              <li><span class="fa-li"><i class="fa-regular fa-check"></i></span>Future feature in the works</li>
-            </ul>
-         </div>
-         <div class = "column-2">
-          <i class="fa-regular fa-xmark fa-4x"></i>
-         </div>
-      </div>
-    </div>
-    
-    <h4 style="text-align: center; padding-bottom: 24px;">About this site</h4>
-    <div class="container-3">
-      <div class ="box-1">
-        <div class="column-1">
-          <h4>Containerized</h4>
-            <ul class="fa-ul">
-              <li><span class="fa-li"><i class="fa-regular fa-check"></i></span>Scalable, serverless web application built upon container and Knative open standards</li>
-            </ul>
-         </div>
-         <div class = "column-2">
-           <i class="fa-light fa-cubes fa-4x"></i>
-         </div> 
+      <div class="container-2">
+        <h5>Hi, I'm Christian</h5>
+        <h2>Welcome to my personal site</h2>
+        <h3>This hosts my personal projects. Scroll down to view.</h3>
+        <div class="main-box">
+          <p>A little about me...</p><br>
+          <p>I'm an aspiring software developer with work experience in IT.</p><br>
+          <p>I started to take programming seriously at the end of summer 2021 by building a web-scraping tool with Python to pull data from websites that will return financial ratios of a given company.</p><br>
+          <p>Since then, I have taken my skills to the next level by creating this website with custom code and Flask as the web framwork. This site holds all of my projects that I create.</p><br>
+        </div>
       </div>
       
-      <div class ="box-2">
-        <div class="column-1">
-          <h4>Built on the cloud</h4>
-            <ul class="fa-ul">
-              <li><span class="fa-li"><i class="fa-regular fa-check"></i></span>Built on Google Cloud Platform with Cloud Run and Firebase Hosting</li>
-            </ul>
-         </div>
-         <div class = "column-2">
-           <i class="fa-light fa-cloud-check fa-4x"></i>
-         </div> 
-      </div>
-      <div class ="box-3">
-        <div class="column-1">
-          <h4>Lightweight web framework</h4>
-            <ul class="fa-ul">
-              <li><span class="fa-li"><i class="fa-regular fa-check"></i></span>Python backend carried by the scalable Flask framework</li>
-            </ul>
-         </div>
-         <div class = "column-2">
-          <i class="fa-light fa-code fa-4x"></i>
-         </div>
-      </div>
-    </div>
-    
-    <!-- footer -->
-    <div class="footer">
-      <div class="footer-text">
-          Icons sourced from Font Awesome<br>
-          View my social media profiles down below!
+      <div class="container-3">
+        <h4 style="text-align: center; font-size: 2rem;">Site content (projects)</h4>
+        <div class ="box-1">
+          <div class="column-1">
+            <h4><i style="padding-right: 6px;" class="fa-regular fa-arrow-right-to-bracket"></i></i><a href="www.google.com">Stock search project</a></h4>
+              <ul class="fa-ul">
+                <li><span class="fa-li"><i class="fa-regular fa-check"></i></span>Search companies and ETFs, both domestic and international</li>
+                <li><span class="fa-li"><i class="fa-regular fa-check"></i></span>View key metrics like P/E and PEG ratios</li>
+                <li><span class="fa-li"><i class="fa-regular fa-check"></i></span>More features are being built!</li>
+              </ul>
+           </div>
+           <div class = "column-2">
+             <i class="fa-light fa-chart-line fa-4x"></i>
+           </div> 
+        </div>
+        
+        <div class ="box-2">
+          <div>
+            <h4>Working on something new...</h4>
+              <ul class="fa-ul">
+                <li><span class="fa-li"><i class="fa-light fa-xmark"></i></span>Future feature in the works</li>
+              </ul>
+           </div>
+        </div>
+        
+        <div class ="box-3">
+          <div>
+            <h4>Working on something new...</h4>
+              <ul class="fa-ul">
+                <li><span class="fa-li"><i class="fa-light fa-xmark"></i></span>Future feature in the works</li>
+              </ul>
+           </div>
+        </div>
       </div>
   
-      <div class="logos">
-          <a href="https://github.com/SquareHammer89/minimalfire-web-app">
-              <i class="fa-brands fa-github fa-3x"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/christian-sanchez-nv/">
-              <i class="fa-brands fa-linkedin fa-3x"></i>
-          </a>
-          <a href="https://twitter.com/MinimalFire_app">
-              <i class="fa-brands fa-twitter fa-3x"></i>
-          </a>
+      <h4 style="text-align: center; padding-bottom: 24px; font-size: 2rem;">Technical stuff</h4>
+      <div class="container-4">
+        <div class ="box-4">
+          <div class="column-1">
+            <h4>Containerized</h4>
+              <ul class="fa-ul">
+                <li><span class="fa-li"><i class="fa-regular fa-check"></i></span>Scalable, serverless web application built upon container and Knative open standards</li>
+              </ul>
+           </div>
+           <div class = "column-2">
+             <i class="fa-light fa-cubes fa-4x"></i>
+           </div> 
+        </div>
+        
+        <div class ="box-5">
+          <div class="column-1">
+            <h4>Built on the cloud</h4>
+              <ul class="fa-ul">
+                <li><span class="fa-li"><i class="fa-regular fa-check"></i></span>Built on Google Cloud Platform with Cloud Run and Firebase Hosting</li>
+              </ul>
+           </div>
+           <div class = "column-2">
+             <i class="fa-light fa-cloud-check fa-4x"></i>
+           </div> 
+        </div>
+        <div class ="box-6">
+          <div class="column-1">
+            <h4>Lightweight web framework</h4>
+              <ul class="fa-ul">
+                <li><span class="fa-li"><i class="fa-regular fa-check"></i></span>Python backend carried by the scalable Flask framework</li>
+              </ul>
+           </div>
+           <div class = "column-2">
+            <i class="fa-light fa-code fa-4x"></i>
+           </div>
+        </div>
       </div>
-    </div>
+      
+      <!-- footer -->
+      <div class="footer">
+        <div class="footer-text">
+            Icons sourced from Font Awesome<br>
+            View my social media profiles down below!
+        </div>
+    
+        <div class="logos">
+            <a href="https://github.com/SquareHammer89/minimalfire-web-app">
+                <i class="fa-brands fa-github fa-3x"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/christian-sanchez-nv/">
+                <i class="fa-brands fa-linkedin fa-3x"></i>
+            </a>
+            <a href="https://twitter.com/csanchezdev">
+                <i class="fa-brands fa-twitter fa-3x"></i>
+            </a>
+        </div>
+      </div>
 
   </body>
 </html>
