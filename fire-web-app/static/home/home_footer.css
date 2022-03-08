@@ -16,6 +16,11 @@
     text-align: center;
 }
 
+ul.footer-list {
+    list-style-type: none;
+    font-size: 0.8rem;
+}
+
 .logos {
     display: flex;
     justify-content: center;
