@@ -233,7 +233,7 @@ def search_page():
         nasdaq_percent = MarketIndices().NasdaqPercent()
         nasdaq_change = MarketIndices().NASDAQChange()
         return render_template(
-        "index.html",
+        "search.html",
         market_status = market_hours(),
         dow_jones_value=dow_jones_value,
         dow_jones_percent=dow_jones_percent,
