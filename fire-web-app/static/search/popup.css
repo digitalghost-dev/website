@@ -10,14 +10,13 @@
     background-color: #F2F7FF;
     border-style: solid;
     border-width: 2px;
-    border-radius: 4px;
+    border-radius: 8px;
     width: 350px;
     padding: 30px 40px;
     position: absolute;
     transform: translate(-50%,-50%);
     left: 50%;
     top: 50%;
-    border-radius: 8px;
     font-family: Quicksand, sans-serif;
     display: none;
     text-align: center;
