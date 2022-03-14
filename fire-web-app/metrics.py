@@ -3,7 +3,6 @@ import os
 import pytz
 import json
 from config import powerlink
-from market import MarketIndices
 from urllib.request import urlopen
 from datetime import datetime, date
 from flask import Flask, redirect, render_template, request, url_for
