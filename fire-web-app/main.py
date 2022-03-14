@@ -4,7 +4,7 @@ import pytz
 import json
 from config import powerlink
 from market import MarketIndices
-from metrics import companySearch
+from metrics import CompanySearch
 from urllib.request import urlopen
 from datetime import datetime, date
 from flask import Flask, redirect, render_template, request, url_for
@@ -39,179 +39,6 @@ def market_hours():
         return('The market is currently open!')
     else:
         return('The market is currently closed.')
-
-# This class is responsible for the values shown on the home page
-class MarketIndices:
-
-    def DowJonesIndex(self):
-        with urlopen(base_url + dowjones + powerlink) as response:
-            source = response.read()
-            data = json.loads(source)
-        
-        price = (data[0]["price"])
-        return('{0:,}'.format(price))
-
-    def DowJonesChange(self):
-        with urlopen(base_url + dowjones + powerlink) as response:
-            source = response.read()
-            data = json.loads(source)
-
-        change = (data[0]["change"])
-
-        if change < 0:
-            return(round(change, 2))
-        else:
-            return("+" + str(round(change, 2)))
-
-    def DowJonesPercent(self):
-        with urlopen(base_url + dowjones + powerlink) as response:
-            source = response.read()
-            data = json.loads(source)
-        
-        percent_change = str(round(data[0]["changesPercentage"], 2))
-        return(percent_change + "%")
-
-    def SP500Index(self):
-        with urlopen(base_url + sp + powerlink) as response:
-            source = response.read()
-            data = json.loads(source)
-
-        price = (data[0]["price"])
-        return('{0:,}'.format(price))
-
-    def SP500Change(self):
-        with urlopen(base_url + sp + powerlink) as response:
-            source = response.read()
-            data = json.loads(source)
-
-        change = (data[0]["change"])
-
-        if change < 0:
-            return(round(change, 2))
-        else:
-            return("+" + str(round(change, 2)))
-
-    def SPPercent(self):
-        with urlopen(base_url + sp + powerlink) as response:
-            source = response.read()
-            data = json.loads(source)
-        
-        percent_change = str(round(data[0]["changesPercentage"], 2))
-        return(percent_change + "%")
-
-    def NASDAQIndex(self):
-        with urlopen(base_url + nasdaq + powerlink) as response:
-            source = response.read()
-            data = json.loads(source)
-
-        price = (data[0]["price"])
-        return('{0:,}'.format(price))
-
-    def NasdaqPercent(self):
-        with urlopen(base_url + nasdaq + powerlink) as response:
-            source = response.read()
-            data = json.loads(source)
-        
-        percent_change = str(round(data[0]["changesPercentage"], 2))
-        return(percent_change + "%")
-
-    def NASDAQChange(self):
-        with urlopen(base_url + nasdaq + powerlink) as response:
-            source = response.read()
-            data = json.loads(source)
-
-    
-        change = (data[0]["change"])
-
-        if change < 0:
-            return(round(change, 2))
-        else:
-            return("+" + str(round(change, 2)))
-
-class companySearch:
-
-    # Company name function
-    def check_for_company(self, company_name):
-        try:
-            with urlopen(base_url + profile + company_name.upper() + powerlink) as response:
-                source = response.read()
-                data = json.loads(source)
-
-            company_name = (data[0]["companyName"])
-            return(company_name)
-        except:
-            return("Company doesn\'t exist.")
-
-    # Stock price function
-    def stock_price_func(self, price):
-        
-        with urlopen(base_url + quote + price.upper() + powerlink) as response:
-            source = response.read()
-            data = json.loads(source)
-
-        price = "$" + str((data[0]["price"]))
-        return(price)
-
-    # Price to Earnings Ratio function
-    def pe_ratio_func(self, price):
-        try:
-            with urlopen(base_url + ratiosTTM + price.upper() + powerlink) as response:
-                source = response.read()
-                data = json.loads(source)
-
-            peRatioTTM = round(data[0]["peRatioTTM"], 2)
-            return(peRatioTTM)
-        except:
-            return("-")
-
-    # Price to Earnings Growth Ratio function
-    def peg_ratio_func(self, price):
-        try:
-            with urlopen(base_url + ratiosTTM + price.upper() + powerlink) as response:
-                source = response.read()
-                data = json.loads(source)
-                
-            pegRatioTTM = round(data[0]["pegRatioTTM"], 2)
-            return(pegRatioTTM)
-        except:
-            return("-")
-
-    # Price to Book Ratio function
-    def pb_ratio_func(self, price):
-        try:
-            with urlopen(base_url + ratiosTTM + price.upper() + powerlink) as response:
-                source = response.read()
-                data = json.loads(source)
-
-            pbRatioTTM = round(data[0]["priceToBookRatioTTM"], 2)
-            return(pbRatioTTM)
-        except:
-            return("-")
-
-    # Price to Sales Ratio function
-    def ps_ratio_func(self, price):
-        try:
-            with urlopen(base_url + ratiosTTM + price.upper() + powerlink) as response:
-                source = response.read()
-                data = json.loads(source)
-            
-            psRatioTTM = round(data[0]["priceToSalesRatioTTM"], 2)
-            return(psRatioTTM)
-        except:
-            return("-")
-
-    # Price to Free Cash Flow function
-    def pfcf_ratio_func(self, price):
-        try:
-            with urlopen(base_url + ratiosTTM + price.upper() + powerlink) as response:
-                source = response.read()
-                data = json.loads(source)
-            
-            pfcfRatioTTM = round(data[0]["priceToFreeCashFlowsRatioTTM"], 2)
-            return(pfcfRatioTTM)
-        except:
-            return("-")  
- 
 
 # Routing to the home page
 @app.route('/')
@@ -260,13 +87,13 @@ def ticker_result(variable):
     nasdaq_percent = MarketIndices().NasdaqPercent()
     nasdaq_change = MarketIndices().NASDAQChange()
     users_ticker_choice = users_request(variable)
-    company = companySearch().check_for_company(variable)
-    stock_price = companySearch().stock_price_func(variable)
-    pe_ratio = companySearch().pe_ratio_func(variable)
-    peg_ratio = companySearch().peg_ratio_func(variable)
-    pb_ratio = companySearch().pb_ratio_func(variable)
-    ps_ratio = companySearch().ps_ratio_func(variable)
-    pfcf_ratio = companySearch().pfcf_ratio_func(variable)
+    company = CompanySearch().check_for_company(variable)
+    stock_price = CompanySearch().stock_price_func(variable)
+    pe_ratio = CompanySearch().pe_ratio_func(variable)
+    peg_ratio = CompanySearch().peg_ratio_func(variable)
+    pb_ratio = CompanySearch().pb_ratio_func(variable)
+    ps_ratio = CompanySearch().ps_ratio_func(variable)
+    pfcf_ratio = CompanySearch().pfcf_ratio_func(variable)
     return render_template(
         "result.html",
         dow_jones_value=dow_jones_value,
