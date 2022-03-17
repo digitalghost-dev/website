@@ -1,4 +1,4 @@
-# minimalfire.app
+# christiansanchez.dev
 ***DISCLAIMER:*** I am not a financial advisor, this program is for educational purposes, and should not be taken as investment advice.
 
 This repository holds the code for my web app, my first ever coding project.
