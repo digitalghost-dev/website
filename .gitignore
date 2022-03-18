@@ -1,4 +1,5 @@
 config.py
+lodash.js
 __pycache__/
 .venv
 .vscode
