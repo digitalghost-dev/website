@@ -117,7 +117,7 @@ h5 {
     to{width: 10.625rem;}
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 2000px) {
     @keyframes animated-text{
         from{width: 0;}
         to{width: 185px;}
