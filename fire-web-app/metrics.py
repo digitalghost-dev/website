@@ -23,7 +23,7 @@ sp = 'quote/%5EGSPC/'
 nasdaq = 'quote/%5EIXIC/'
 
 # This class returns information about the company
-class companySearch:
+class CompanySearch:
     # Company name function
     def check_for_company(self, company_name):
         try:
