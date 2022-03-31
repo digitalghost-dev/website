@@ -2,10 +2,8 @@
   <head>
     <link rel="icon" type="image/x-icon" href="https://storage.cloud.google.com/minimalfire-web-app_cloudbuild/favicon/fire-flame-curved-duotone.svg">
     <script src="https://kit.fontawesome.com/84587c6ecd.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Montserrat|Quicksand|Raleway">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Red Hat Mono">
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='home/home.css') }}">
-    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='home/home_footer.css') }}">
-    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='home/animated_background.css') }}">
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='floating_button.css') }}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -14,140 +12,43 @@
   <body>
 
     <div class="action" onclick="actionToggle();">
-        <span><i class="fa-regular fa-ellipsis fa-2xs"></i></span>
-        <ol>
-          <li><a href="https://www.christiansanchez.dev/"><i class="fa-light fa-home my-float"></i>Home</a></li>
-          <li><a href="https://www.christiansanchez.dev/search"><i class="fa-light fa-chart-line my-float"></i>Stock search tool</a></li>
-        </ol>
-      </div>
-      <script>
-        function actionToggle(){
-          var action = document.querySelector('.action');
-          action.classList.toggle('active')
-        }
-      </script>
-      
-      <div class="container-1">
-        <i class="fa-duotone fa-fire-flame-curved fa-4x"></i>
-      </div>
-      
-      <div class="container-2">
-        <h5>Hi, I'm Christian</h5>
-        <div class="context">
-          <h1>Welcome to my website</h1>
-        </div>
-  
-        <div class="area" >
-          <ul class="circles">
-            <li><i class="fa-regular fa-code fa-5x"></i></li>
-            <li><i class="fa-regular fa-music-note fa-4x"></i></li>
-            <li><i class="fa-regular fa-suitcase-rolling fa-6x"></i></li>
-            <li><i class="fa-regular fa-dollar-sign fa-8x"></i></li>
-            <li><i class="fa-solid fa-passport fa-4x"></i></li>
-            <li><i class="fa-regular fa-book fa-5x"></i></li>
-            <li><i class="fa-regular fa-guitar-electric fa-3x"></i></li>
-            <li><i class="fa-regular fa-gamepad-modern fa-4x"></i></li>
-            <li><i class="fa-regular fa-coffee-pot fa-6x"></i></li>
-            <li><i class="fa-regular fa-pizza-slice fa-3x"></i></li>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="container-3">
-        <h4 style="text-align: center; font-size: 2rem;">My projects</h4>
-        <div class ="box-1">
-          <div class="column-1">
-            <h4><i style="padding-right: 6px;" class="fa-regular fa-arrow-right-to-bracket"></i></i><a href="https://www.christiansanchez.dev/search">Stock search</a></h4>
-              <ul class="fa-ul">
-                <li><span class="fa-li"><i class="fa-regular fa-check"></i></span>Search companies and ETFs, both domestic and international</li>
-                <li><span class="fa-li"><i class="fa-regular fa-check"></i></span>View key metrics like P/E and PEG ratios</li>
-                <li><span class="fa-li"><i class="fa-regular fa-check"></i></span>More features are being built!</li>
-              </ul>
-           </div>
-           <div class = "column-2">
-             <i class="fa-light fa-chart-line fa-4x"></i>
-           </div> 
-        </div>
-        
-        <div class ="box-2">
-          <div>
-            <h4>Working on something new...</h4>
-              <ul class="fa-ul">
-                <li><span class="fa-li"><i class="fa-light fa-xmark"></i></span>Future feature in the works</li>
-              </ul>
-           </div>
-        </div>
-        
-        <div class ="box-3">
-          <div>
-            <h4>Working on something new...</h4>
-              <ul class="fa-ul">
-                <li><span class="fa-li"><i class="fa-light fa-xmark"></i></span>Future feature in the works</li>
-              </ul>
-           </div>
-        </div>
-      </div>
-  
-      <h4 style="text-align: center; padding-bottom: 24px; font-size: 2rem;">Technical stuff</h4>
-      <div class="container-4">
-        <div class ="box-4">
-          <div class="column-1">
-            <h4>Containerized</h4>
-              <ul class="fa-ul">
-                <li><span class="fa-li"><i class="fa-regular fa-check"></i></span>Scalable, serverless web application built upon container and Knative open standards</li>
-              </ul>
-           </div>
-           <div class = "column-2">
-             <i class="fa-light fa-cubes fa-4x"></i>
-           </div> 
-        </div>
-        
-        <div class ="box-5">
-          <div class="column-1">
-            <h4>Built on the cloud</h4>
-              <ul class="fa-ul">
-                <li><span class="fa-li"><i class="fa-regular fa-check"></i></span>Built on Google Cloud Platform with Cloud Run and Firebase Hosting</li>
-              </ul>
-           </div>
-           <div class = "column-2">
-             <i class="fa-light fa-cloud-check fa-4x"></i>
-           </div> 
-        </div>
-        <div class ="box-6">
-          <div class="column-1">
-            <h4>Lightweight web framework</h4>
-              <ul class="fa-ul">
-                <li><span class="fa-li"><i class="fa-regular fa-check"></i></span>Python backend carried by the scalable Flask framework</li>
-              </ul>
-           </div>
-           <div class = "column-2">
-            <i class="fa-light fa-code fa-4x"></i>
-           </div>
-        </div>
-      </div>
-      
-      <!-- footer -->
-      <div class="footer">
-        <div class="footer-text">
-            <ul class="footer-list">
-                <li>Icons sourced from Font Awesome</li>
-                <li>Curious about version history? <a href="https://github.com/SquareHammer89/christiansanchez-dev/wiki/Version-History">View the wiki!</a></li>
-                <li>View my social media profiles down below!</li>
-            </ul>
-        </div>
-    
-        <div class="logos">
-            <a href="https://github.com/SquareHammer89/minimalfire-web-app">
-                <i class="fa-brands fa-github fa-3x"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/christian-sanchez-nv/">
-                <i class="fa-brands fa-linkedin fa-3x"></i>
-            </a>
-            <a href="https://twitter.com/csanchezdev">
-                <i class="fa-brands fa-twitter fa-3x"></i>
-            </a>
-        </div>
-      </div>
+      <span><i class="fa-light fa-user fa-2xs"></i></span>
+      <ol>
+        <li><a style="text-decoration: none; color: #DA1E37" href="https://twitter.com/csanchezdev/"><i class="fa-brands fa-twitter"></i>Twitter</a></li>
+        <li><a style="text-decoration: none; color: #DA1E37" href="https://www.linkedin.com/in/christian-sanchez-nv/"><i class="fa-brands fa-linkedin"></i>LinkedIn</a></li>
+        <li><a style="text-decoration: none; color: #DA1E37" href="https://github.com/SquareHammer89"><i class="fa-brands fa-github"></i>Github</a></li>
+      </ol>
+    </div>
+    <script>
+      function actionToggle(){
+        var action = document.querySelector('.action');
+        action.classList.toggle('active')
+      }
+    </script>
 
-  </body>
-</html>
+    <div class="container">
+      <h2>Hi there</h2>
+      <h1>Welcome to my personal site</h1>
+      <div class="menu">
+        <h5>About</h5>
+        <h5>Projects</h5>
+      </div>
+    </div>
+
+    <div class="menu-items">
+    </div>
+
+    <div class="area" >
+      <ul class="circles">
+        <li><i class="fa-solid fa-code fa-5x"></i></li>
+        <li><i class="fa-regular fa-music-note fa-4x"></i></li>
+        <li><i class="fa-regular fa-suitcase-rolling fa-6x"></i></li>
+        <li><i class="fa-regular fa-dollar-sign fa-8x"></i></li>
+        <li><i class="fa-solid fa-passport fa-4x"></i></li>
+        <li><i class="fa-regular fa-book fa-5x"></i></li>
+        <li><i class="fa-regular fa-guitar-electric fa-3x"></i></li>
+        <li><i class="fa-regular fa-gamepad-modern fa-4x"></i></li>
+        <li><i class="fa-regular fa-coffee-pot fa-6x"></i></li>
+        <li><i class="fa-regular fa-pizza-slice fa-3x"></i></li>
+      </ul>
+    </div>
