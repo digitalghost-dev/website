@@ -1,54 +1,61 @@
 <html>
-  <head>
-    <link rel="icon" type="image/x-icon" href="https://storage.cloud.google.com/minimalfire-web-app_cloudbuild/favicon/fire-flame-curved-duotone.svg">
-    <script src="https://kit.fontawesome.com/84587c6ecd.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Red Hat Mono">
-    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='home/home.css') }}">
-    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='floating_button.css') }}">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <title>Home | christiansanchez.dev</title>
-  </head>
-  <body>
+    <head>
+        <link rel="icon" type="image/x-icon" href="https://storage.cloud.google.com/minimalfire-web-app_cloudbuild/favicon/fire-flame-curved-duotone.svg">
+        <script src="https://kit.fontawesome.com/84587c6ecd.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Red Hat Mono">
+        <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='home/home.css') }}">
+        <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='floating_button.css') }}">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+        <title>Home | christiansanchez.dev</title>
+    </head>
+    <body>
 
-    <div class="action" onclick="actionToggle();">
-      <span><i class="fa-light fa-user fa-2xs"></i></span>
-      <ol>
-        <li><a style="text-decoration: none; color: #DA1E37" href="https://twitter.com/csanchezdev/"><i class="fa-brands fa-twitter"></i>Twitter</a></li>
-        <li><a style="text-decoration: none; color: #DA1E37" href="https://www.linkedin.com/in/christian-sanchez-nv/"><i class="fa-brands fa-linkedin"></i>LinkedIn</a></li>
-        <li><a style="text-decoration: none; color: #DA1E37" href="https://github.com/SquareHammer89"><i class="fa-brands fa-github"></i>Github</a></li>
-      </ol>
-    </div>
-    <script>
-      function actionToggle(){
-        var action = document.querySelector('.action');
-        action.classList.toggle('active')
-      }
-    </script>
+        <div class="action" onclick="actionToggle();">
+            <span><i style="padding-top: 0.5rem;" class="fa-light fa-bars fa-2xs"></i></span>
+            <ol>
+                <li><a style="text-decoration: none; color: #DA1E37" href="https://www.christiansanchez.dev/about">About</a></li>
+                <li><a style="text-decoration: none; color: #DA1E37" href="https://www.christiansanchez.dev/projects">Projects</a></li>
+            </ol>
+        </div>
+        <script>
+            function actionToggle(){
+                var action = document.querySelector('.action');
+                action.classList.toggle('active')
+            }
+        </script>
 
-    <div class="container">
-      <h2>Hi there</h2>
-      <h1>Welcome to my personal site</h1>
-      <div class="menu">
-        <h5>About</h5>
-        <h5>Projects</h5>
-      </div>
-    </div>
+        <div class="navbar">
+            <a href="https://twitter.com/csanchezdev/">
+                <i class="fa-brands fa-twitter fa-3x"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/christian-sanchez-nv/">
+                <i class="fa-brands fa-linkedin fa-3x"></i>
+            </a>
+            <a href="https://github.com/SquareHammer89/minimalfire-web-app">
+                <i class="fa-brands fa-github fa-3x"></i>
+            </a>
+        </div>
 
-    <div class="menu-items">
-    </div>
+        <div class="container">
+            <h2>Hi there</h2>
+            <h1>Welcome to my personal site</h1>
+        </div>
 
-    <div class="area" >
-      <ul class="circles">
-        <li><i class="fa-solid fa-code fa-5x"></i></li>
-        <li><i class="fa-regular fa-music-note fa-4x"></i></li>
-        <li><i class="fa-regular fa-suitcase-rolling fa-6x"></i></li>
-        <li><i class="fa-regular fa-dollar-sign fa-8x"></i></li>
-        <li><i class="fa-solid fa-passport fa-4x"></i></li>
-        <li><i class="fa-regular fa-book fa-5x"></i></li>
-        <li><i class="fa-regular fa-guitar-electric fa-3x"></i></li>
-        <li><i class="fa-regular fa-gamepad-modern fa-4x"></i></li>
-        <li><i class="fa-regular fa-coffee-pot fa-6x"></i></li>
-        <li><i class="fa-regular fa-pizza-slice fa-3x"></i></li>
-      </ul>
-    </div>
+        <div class="area" >
+            <ul class="circles">
+                <li><i class="fa-solid fa-code fa-5x"></i></li>
+                <li><i class="fa-regular fa-music-note fa-4x"></i></li>
+                <li><i class="fa-regular fa-suitcase-rolling fa-6x"></i></li>
+                <li><i class="fa-regular fa-dollar-sign fa-8x"></i></li>
+                <li><i class="fa-solid fa-passport fa-4x"></i></li>
+                <li><i class="fa-regular fa-book fa-5x"></i></li>
+                <li><i class="fa-regular fa-guitar-electric fa-3x"></i></li>
+                <li><i class="fa-regular fa-gamepad-modern fa-4x"></i></li>
+                <li><i class="fa-regular fa-coffee-pot fa-6x"></i></li>
+                <li><i class="fa-regular fa-pizza-slice fa-3x"></i></li>
+            </ul>
+        </div>
+    
+    </body>
+</html>
