@@ -28,7 +28,6 @@ h2 {
 h5 {
     font-size: 1rem;
     font-family: "Red Hat Mono";
-
 }
 
 .container {
@@ -49,7 +48,6 @@ h5 {
 }
 
 .circles{
-    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
