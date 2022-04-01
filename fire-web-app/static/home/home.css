@@ -1,3 +1,18 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 4rem;
+    padding: 1rem 0rem 1rem 0rem;
+    background-color: #DA1E37;
+    position: absolute;
+    width: 100%;
+}
+
+.fa-brands {
+    color: #FFF;
+}
+
 h1 {
     font-size: 2.5rem;
     font-family: "Montserrat";
@@ -13,6 +28,7 @@ h2 {
 h5 {
     font-size: 1rem;
     font-family: "Red Hat Mono";
+
 }
 
 .container {
@@ -24,24 +40,6 @@ h5 {
     width: 100%;
     position: absolute;
     color: azure;
-}
-
-.menu {
-    padding-top: 1rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 30%;
-}
-
-@media only screen and (max-width: 600px) {
-    .menu {
-        padding-top: 1rem;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 50%;
-    }
 }
 
 .area{
