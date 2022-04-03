@@ -3,8 +3,8 @@
         <link rel="icon" type="image/x-icon" href="https://storage.cloud.google.com/minimalfire-web-app_cloudbuild/favicon/fire-flame-curved-duotone.svg">
         <script src="https://kit.fontawesome.com/84587c6ecd.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Red Hat Mono">
-        <link type="text/css" rel="stylesheet" href="home.css">
-        <link type="text/css" rel="stylesheet" href="floating_button.css">
+        <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='home/home.scss') }}">
+        <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='floating_button.css') }}">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
         <title>Home | christiansanchez.dev</title>
@@ -56,6 +56,20 @@
                 <li><i class="fa-light fa-hand-horns fa-3x"></i></li>
             </ul>
         </div>
+
+
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+            </label>
+        </div>
+
+        <div class="dark-light-icon">
+            <i class="fa-solid fa-circle-half-stroke fa-2x"></i>
+        </div>
+
+        <script src="{{ url_for('static', filename='scripts/light-dark-theme.js') }}"></script>
     
     </body>
 </html>
