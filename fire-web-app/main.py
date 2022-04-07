@@ -45,6 +45,14 @@ def market_hours():
 def home():
     return render_template("home.html")
 
+@app.route('/about')
+def about():
+    return render_template("about.html")
+
+@app.route('/projects')
+def project():
+    return render_template("projects.html")
+
 # Routing to the search page
 @app.route('/search', methods = ["GET", "POST"])
 def search_page():
