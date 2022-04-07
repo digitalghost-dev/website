@@ -1,0 +1,21 @@
+body {
+    background-color: black;
+}
+
+h1 {
+    color: white;
+    font-family: Montserrat, sans-serif;
+}
+
+.fa-wrench {
+    color: white;
+}
+
+.intro {
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
