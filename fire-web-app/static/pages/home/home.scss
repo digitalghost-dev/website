@@ -21,19 +21,8 @@
     position: fixed;
     width: 60px;
     top: 90%;
-    right: 5%;
+    right: 55px;
 }
-
-@media only screen and (max-width: 600px) {
-    .theme-switch {
-        display: inline-block;
-        height: 34px;
-        position: fixed;
-        width: 60px;
-        top: 90%;
-        right: 12%;
-    }
-  }
 .theme-switch input {
     display: none;
 }
@@ -79,7 +68,7 @@ input:checked + .slider:before {
 .dark-light-icon {
     position: fixed;
     top: 90%;
-    right: 2%;
+    right: 16px;
     color: var(--font-color);
 }
 
