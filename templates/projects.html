@@ -4,15 +4,103 @@
     <script src="https://kit.fontawesome.com/84587c6ecd.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Red Hat Mono">
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='pages/projects/projects.css') }}">
-    
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='floating_button.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='light_dark_theme.css') }}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <title>Projects | christiansanchez.dev</title>
 </head>
 <body>
-    <div class="intro">
-        <h1>This page is currently under contruction</h1>
-        <i class="fa-thin fa-wrench fa-3x"></i>
+    <!-- floating menu button -->
+    <div class="action" onclick="actionToggle();">
+        <span><i style="padding-top: 10px;" class="fa-light fa-bars fa-2xs"></i></span>
+        <ol>
+            <li><a style="text-decoration: none; color: #DA1E37" href="https://www.christiansanchez.dev/home">Home</a></li>
+            <li><a style="text-decoration: none; color: #DA1E37" href="https://www.christiansanchez.dev/about">About</a></li>
+        </ol>
     </div>
+    <script>
+        function actionToggle(){
+            var action = document.querySelector('.action');
+            action.classList.toggle('active')
+        }
+    </script>
+
+    <div class="navbar">
+        <h1>| Projects</h1>
+    </div>
+
+    <!-- breadtrail -->
+    <div class="breadtrail"><a href="/">home</a> > projects</div>
+
+    <div class="introduction-message">
+        <h2>Welcome to my projects page!</h2>
+        <h4>Here are all of my projects that I've built or are currently being built.</h4>
+    </div>
+
+    <div class="python-section">
+        <h3>Projects built with Python</h3>
+        <i class="fa-brands fa-python fa-2x"></i>
+    </div>
+
+    <div class="grid-container">
+
+        <!-- First box -->
+        <div class="grid-link-1">
+            <a href="https://www.christiansanchez.dev/projects/search">
+                <div class="first-grid-box">
+                    <i class="fa-light fa-chart-line fa-4x"></i>
+                    <div class="circle"></div>
+                    <div class="box-information">
+                        <h5>Stock Data</h5>
+                        <p>This tool allows you to search for companies or ETFs and will present useful data for making smarter decsions.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Second box -->
+        <div class="grid-link-2">
+            <a href="www.google.com">
+                <div class="second-grid-box">
+                    <i class="fa-thin fa-wrench fa-4x"></i>
+                    <div class="circle"></div>
+                    <div class="box-information">
+                        <h5>In the works</h5>
+                        <p>Currently building something new!</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Third box -->
+        <div class="grid-link-3">
+            <a href="www.google.com">
+                <div class="third-grid-box">
+                    <i class="fa-thin fa-wrench fa-4x"></i>
+                    <div class="circle"></div>
+                    <div class="box-information">
+                        <h5>In the works</h5>
+                        <p>Currently building something new!</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+    </div> <!-- End of grid div -->
+
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+        </label>
+    </div>
+
+    <div class="dark-light-icon">
+        <i class="fa-solid fa-circle-half-stroke fa-2x"></i>
+    </div>
+
+    <script src="{{ url_for('static', filename='scripts/light_dark_theme.js') }}"></script>
+
 </body>
 </html>
