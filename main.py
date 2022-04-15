@@ -54,7 +54,7 @@ def project():
     return render_template("projects.html")
 
 # Routing to the search page
-@app.route('/search', methods = ["GET", "POST"])
+@app.route('/projects/search', methods = ["GET", "POST"])
 def search_page():
     if request.method == "POST":
         variable = request.form["variable"]
