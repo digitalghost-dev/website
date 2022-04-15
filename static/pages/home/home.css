@@ -1,75 +1,15 @@
+/* Light theme colors */
 :root {
     --background-color: #ced4da;
     --font-color: #000;
     --brand-color: #ced4da;
 }
 
+/* Dark theme colors */
 [data-theme="dark"] {
     --background-color: #000;
     --font-color: #ced4da;
     --brand-color: #000;
-}
-
-.theme-switch-wrapper {
-    display: flex;
-    align-items: center;
-}
-
-.theme-switch {
-    display: inline-block;
-    height: 34px;
-    position: fixed;
-    width: 60px;
-    top: 90%;
-    right: 55px;
-}
-.theme-switch input {
-    display: none;
-}
-
-.slider {
-    background-color: #ccc;
-    bottom: 0;
-    cursor: pointer;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    transition: .4s;
-}
-
-.slider:before {
-    background-color: #fff;
-    bottom: 4px;
-    content: "";
-    height: 26px;
-    left: 4px;
-    position: absolute;
-    transition: .4s;
-    width: 26px;
-}
-
-input:checked + .slider {
-    background-color: #DA1E37;
-}
-
-input:checked + .slider:before {
-    transform: translateX(26px);
-}
-
-.slider.round {
-    border-radius: 34px;
-}
-
-.slider.round:before {
-    border-radius: 50%;
-}
-
-.dark-light-icon {
-    position: fixed;
-    top: 90%;
-    right: 16px;
-    color: var(--font-color);
 }
 
 .navbar {
@@ -90,19 +30,20 @@ input:checked + .slider:before {
 
 h1 {
     font-size: 2.5rem;
-    font-family: "Montserrat";
+    font-family: "Montserrat", sans-serif;
     text-align: center;
     padding: 0rem 1rem 0rem 1rem;
 }
 
 h2 {
     font-size: 1.8rem;
-    font-family: "Montserrat";
+    font-family: "Montserrat", sans-serif;
+    font-weight: 100;
 }
 
 h5 {
     font-size: 1rem;
-    font-family: "Red Hat Mono";
+    font-family: "Red Hat Mono", monospace;
 }
 
 .container {
