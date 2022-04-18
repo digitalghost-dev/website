@@ -1,15 +1,17 @@
 /* Light theme colors */
 :root {
-    --background-color: #ced4da;
-    --font-color: #000;
-    --brand-color: #ced4da;
+    --background-color: #f8f9fa;
+    --font-color: black;
+    --font-color2: #f8f9fa;
+    --brand-color: #f8f9fa;
 }
 
 /* Dark theme colors */
 [data-theme="dark"] {
     --background-color: #000;
-    --font-color: #ced4da;
-    --brand-color: #000;
+    --font-color: #f8f9fa;
+    --font-color2: black;
+    --brand-color: black;
 }
 
 .theme-switch-wrapper {
