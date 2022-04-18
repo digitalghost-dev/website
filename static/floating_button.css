@@ -1,13 +1,13 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Raleway", sans-serif;
    }
  
  .action {
     position: fixed;
-    top: 90%;
-    left: 5%;
+    bottom: 50px;
+    left: 50px;
     width: 50px;
     height: 50px;
     background: #DA1E37;
@@ -24,7 +24,7 @@
      display: flex;
      justify-content: center;
      align-items: center;
-     color: #F2F7FF;
+     color: #f8f9fa;
      font-size: 2em;
      transition: 0.3s ease-in-out;
  }
@@ -37,7 +37,7 @@
      list-style: none;
      position: absolute;
      bottom: 55px;
-     background-color: #F5F3F4;
+     background-color: #f8f9fa;
      min-width: 200px;
      padding: 20px;
      border-radius: 20px;
