@@ -1,17 +1,4 @@
 /* Light theme colors */
-:root {
-    --background-color: #ced4da;
-    --font-color: #000;
-    --brand-color: #ced4da;
-}
-
-/* Dark theme colors */
-[data-theme="dark"] {
-    --background-color: #000;
-    --font-color: #ced4da;
-    --brand-color: #000;
-}
-
 .navbar {
     display: flex;
     flex-direction: row;
@@ -30,14 +17,14 @@
 
 h1 {
     font-size: 2.5rem;
-    font-family: "Montserrat", sans-serif;
-    text-align: center;
-    padding: 0rem 1rem 0rem 1rem;
+    font-family: "Raleway", sans-serif;
+    font-weight: 100;
+    border-bottom: solid #DA1E37 1px;
 }
 
 h2 {
     font-size: 1.8rem;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-weight: 100;
 }
 
@@ -49,11 +36,11 @@ h5 {
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: start;
     top: 40%;
-    width: 100%;
-    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    position: fixed;
     color: var(--font-color);
 }
 
