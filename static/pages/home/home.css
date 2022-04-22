@@ -85,7 +85,7 @@ h5 {
     height: 20px;
     animation-delay: 2s;
     animation-duration: 12s;
-    color: white;
+    color: pink;
 }
 
 /* suitcase icon */
@@ -160,7 +160,7 @@ h5 {
     height: 150px;
     animation-delay: 0s;
     animation-duration: 11s;
-    color: tan;
+    color: brown;
 }
 
 @keyframes animate {
