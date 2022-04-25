@@ -15,7 +15,7 @@ a {
 /* Page title */
 h1 {
     color: var(--font-color2);
-    font-family: "Montserrat", sans-serif;
+    font-family: "Raleway", sans-serif;
     text-align: center;
 }
 
@@ -41,7 +41,7 @@ a {
 /* Text above python project section */
 h2 {
     color: var(--font-color);
-    font-family: "Montserrat", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-size: 2rem;
     font-weight: 100;
     text-align: center;
@@ -49,7 +49,7 @@ h2 {
 
 h4 {
     color: var(--font-color);
-    font-family: "Montserrat", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-size: 1rem;
     font-weight: 100;
     text-align: center;
@@ -58,7 +58,7 @@ h4 {
 /* Python project section title */
 h3 {
     color: var(--font-color);
-    font-family: "Montserrat", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-size: 1.5rem;
     font-weight: 100;
     padding: 0 0 1rem 0.5rem;
@@ -108,7 +108,7 @@ h3 {
 }
 
 h5 { 
-    font-family: "Montserrat", sans-serif;
+    font-family: "Raleway", sans-serif;
     color: var(--font-color);
 }
 
