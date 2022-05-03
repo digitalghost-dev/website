@@ -8,7 +8,7 @@
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='pages/search/search.css') }}">
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='pages/search/popup.css') }}">
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='floating_button.css') }}">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Montserrat|Quicksand">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <script src="https://kit.fontawesome.com/84587c6ecd.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -27,19 +27,21 @@
             </p>
     </div>
 
+    <!--start of floating menu button -->
     <div class="action" onclick="actionToggle();">
-        <span><i class="fa-regular fa-ellipsis fa-2xs"></i></span>
+        <span><i style="padding-top: 10px;" class="fa-light fa-bars fa-2xs"></i></span>
         <ol>
-          <li><a href="https://www.christiansanchez.dev/"><i class="fa-light fa-home my-float"></i>Home</a></li>
-          <li><a href="https://www.christiansanchez.dev/search"><i class="fa-light fa-chart-line my-float"></i>Stock search tool</a></li>
+            <li><a style="text-decoration: none; color: #DA1E37" href="https://www.christiansanchez.dev/">Home</a></li>
+            <li><a style="text-decoration: none; color: #DA1E37" href="https://www.christiansanchez.dev/about">About</a></li>
         </ol>
-      </div>
-      <script>
+    </div>
+    <script>
         function actionToggle(){
-          var action = document.querySelector('.action');
-          action.classList.toggle('active')
+        var action = document.querySelector('.action');
+        action.classList.toggle('active')
         }
-      </script>
+    </script>
+    <!-- end of floating menu button -->
 
     <div class="two-containers">
         <div class="container-1"> <!-- yellow -->
@@ -85,21 +87,21 @@
   
         <!-- containter 2 -->
         <div class="container-2">
+
             <div class="cell" id="inner-cell-1-1">
-                <span class="data"><i class="fa-duotone fa-fire-flame-curved fa-4x"></i></span>
+                <div class="container">
+                    <form>
+                      <input class="js-search-box" type="search" placeholder="search ticker or company" maxlength="18" font-size="24px">
+                    </form>
+                  </div>
+                
+                  <div class="search-results">
+                    <ul class="js-search-result">
+                    </ul>
+                  </div>
             </div>
       
             <div class="cell" id="inner-cell-1-2">
-                <span class="data" style="text-align: center;">
-                    <form action="{{ url_for('search_page') }}" method="post">
-                        <input type="text" name="variable" placeholder="search ticker" maxlength="4" font-size="24px" onkeypress="return (event.charCode > 64 && 
-                        event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" style="text-transform:uppercase">
-                        <input class="button" type="submit" value="Search">
-                    </form>
-                </span>
-            </div>
-      
-            <div class="cell" id="inner-cell-1-3">
                 <span class="data">
                     <h5 class="date">
                         <script>
@@ -108,8 +110,9 @@
                     </h5>
                 </span>
             </div>
-        </div>
-    </div>
+
+        </div> <!-- end of container-2 div -->
+    </div> <!-- end of two-containers div -->
   
 <!-- containter 3 -->    
   
@@ -121,5 +124,7 @@
 
     <script src="{{ url_for('static', filename='scripts/redgreen.js') }}"></script>
     <script src="{{ url_for('static', filename='scripts/popup.js') }}"></script>
+    <script src="{{ url_for('static', filename='scripts/search.js') }}"></script>
+    <script src="{{ url_for('static', filename='lodash.js') }}"></script>
 </body>
 </html>
