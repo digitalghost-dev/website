@@ -27,21 +27,20 @@
             </p>
     </div>
 
-    <!--start of floating menu button -->
-    <div class="action" onclick="actionToggle();">
-        <span><i style="padding-top: 10px;" class="fa-light fa-bars fa-2xs"></i></span>
-        <ol>
-            <li><a style="text-decoration: none; color: #DA1E37" href="https://www.christiansanchez.dev/">Home</a></li>
-            <li><a style="text-decoration: none; color: #DA1E37" href="https://www.christiansanchez.dev/about">About</a></li>
-        </ol>
-    </div>
-    <script>
-        function actionToggle(){
-        var action = document.querySelector('.action');
-        action.classList.toggle('active')
-        }
-    </script>
-    <!-- end of floating menu button -->
+        <div class="action" onclick="actionToggle();">
+            <span><i style="padding-top: 10px;" class="fa-light fa-bars fa-2xs"></i></span>
+            <ol>
+                <li><a style="text-decoration: none; color: #DA1E37" href="">Home</a></li>
+                <li><a style="text-decoration: none; color: #DA1E37" href="/about">About</a></li>
+            </ol>
+        </div>
+        <script>
+            function actionToggle(){
+            var action = document.querySelector('.action');
+            action.classList.toggle('active')
+            }
+        </script>
+      <!-- end of floating button -->
 
     <div class="two-containers">
         <div class="container-1"> <!-- yellow -->
@@ -88,20 +87,15 @@
         <!-- containter 2 -->
         <div class="container-2">
 
-            <div class="cell" id="inner-cell-1-1">
+            <div class="cell" id="inner-cell-2-1">
                 <div class="container">
                     <form>
                       <input class="js-search-box" type="search" placeholder="search ticker or company" maxlength="18" font-size="24px">
                     </form>
-                  </div>
-                
-                  <div class="search-results">
-                    <ul class="js-search-result">
-                    </ul>
-                  </div>
+                </div>
             </div>
       
-            <div class="cell" id="inner-cell-1-2">
+            <div class="cell" id="inner-cell-2-2">
                 <span class="data">
                     <h5 class="date">
                         <script>
@@ -113,14 +107,14 @@
 
         </div> <!-- end of container-2 div -->
     </div> <!-- end of two-containers div -->
-  
-<!-- containter 3 -->    
-  
-    <div class="container-3">
-        <div class="cell-2-1">
-            <h3 id="inner-cell-2-1-2">{{ market_status }}</h3>
-        </div>
-    </div>
+
+    <!-- drop-down search menu -->
+    <div class="search-results">
+        <ul class="js-search-result">
+        </ul>
+    </div>   
+
+    <!-- market status -->
 
     <script src="{{ url_for('static', filename='scripts/redgreen.js') }}"></script>
     <script src="{{ url_for('static', filename='scripts/popup.js') }}"></script>
