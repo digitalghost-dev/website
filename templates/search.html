@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" type="image/x-icon" href="https://storage.cloud.google.com/minimalfire-web-app_cloudbuild/favicon/fire-flame-curved-duotone.svg">
+    <link rel="icon" type="image/x-icon" href="https://storage.cloud.google.com/minimalfire-web-app_cloudbuild/favicon/thought-bubble-light.svg">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="{{ url_for('static', filename='scripts/date.js') }}"></script>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='pages/search/search.css') }}">
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='pages/search/popup.css') }}">
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='floating_button.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='light_dark_theme.css') }}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <script src="https://kit.fontawesome.com/84587c6ecd.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
@@ -15,23 +16,24 @@
     <link rel="icon" type="image/x-icon" href="https://storage.googleapis.com/stock-web-app-334722.appspot.com/favicon.png">
     <title>Search | christiansanchez.dev</title>
 </head>
-<body>
+    <body>
 
-    <div class="popup">
-        <button id="close">&times;</button>
-            <h2>DISCLAIMER</h2>
-            <p>
-                I am not a financial advisor. Any information provided by this site should
-                not be considered investment advice or recommendation. I am not responsible 
-                for your investments or financial decisions.
-            </p>
-    </div>
+        <div class="popup">
+            <button id="close">&times;</button>
+                <h2>DISCLAIMER</h2>
+                <p>
+                    I am not a financial advisor. Any information provided by this site should
+                    not be considered investment advice or recommendation. I am not responsible 
+                    for your investments or financial decisions.
+                </p>
+        </div>
 
+        <!-- Start of floating menu button -->
         <div class="action" onclick="actionToggle();">
             <span><i style="padding-top: 10px;" class="fa-light fa-bars fa-2xs"></i></span>
             <ol>
-                <li><a style="text-decoration: none; color: #DA1E37" href="">Home</a></li>
-                <li><a style="text-decoration: none; color: #DA1E37" href="/about">About</a></li>
+                <li><a style="text-decoration: none; color: #DA1E37" href="https://www.christiansanchez.dev/">Home</a></li>
+                <li><a style="text-decoration: none; color: #DA1E37" href="https://www.christiansanchez.dev/about">About</a></li>    
             </ol>
         </div>
         <script>
@@ -40,85 +42,54 @@
             action.classList.toggle('active')
             }
         </script>
-      <!-- end of floating button -->
 
-    <div class="two-containers">
-        <div class="container-1"> <!-- yellow -->
-            <div class="scrolling-wrapper-flexbox ratios">
-                <div style="border-right-style: solid; border-color: #FFF" class="sub-container-1">
-                    <div class="card">
-                        <div class="top-row">
-                            <div style="font-weight: 700; padding-right: 12px; padding-left: 6px;">Dow Jones</div>
-                            <div class = "percentChange">{{ dow_jones_percent }}</div>
-                        </div>
-                        <div class="bottom-row">
-                            <div style="padding-right: 12px; padding-left: 6px;">{{ dow_jones_value }}</div>
-                            <div class = "percentChange" style="padding-right: 12px; padding-left: 6px;">{{ dow_jones_change }}</div>
-                        </div>
-                    </div>
-                </div>
-                <div style="border-right-style: solid; border-color: #FFF" class="sub-container-1">
-                    <div class="card">
-                        <div class="top-row">
-                            <div style="font-weight: 700; padding-right: 12px; padding-left: 6px;">SP 500</div>
-                            <div class = "percentChange">{{ sp_percent }}</div>
-                        </div>
-                        <div class="bottom-row">
-                            <div style="padding-right: 12px; padding-left: 6px;">{{ sp_value }}</div>
-                            <div class = "percentChange" style="padding-right: 12px; padding-left: 6px;">{{ sp_change }}</div>
-                        </div>           
-                    </div>
-                </div>        
-                <div class="sub-container-1">
-                    <div class="card">         
-                        <div class="top-row">
-                            <div style="font-weight: 700; padding-right: 12px; padding-left: 6px;">Nasdaq</div>
-                            <div class = "percentChange">{{ nasdaq_percent }}</div>
-                        </div>     
-                        <div class="bottom-row">
-                            <div style="padding-right: 12px; padding-left: 6px;">{{ nasdaq_value }}</div>
-                            <div class = "percentChange" style="padding-right: 12px; padding-left: 6px;">{{ nasdaq_change }}</div>
-                        </div>       
-                    </div>
-                </div>
+        <!-- Container 1 is the top navigation part -->
+        <div class="container-1">
+            <div class="container-1-cell-1">
+                <h1>
+                    Stock Data Project
+                </h1>
             </div>
+            
+            <div class="container-1-cell-2">
+                <form>
+                <input class="js-search-box" type="search" placeholder="Enter ticker or company" maxlength="18" font-size="24px">
+                </form>
+            </div>
+        
+            <div class="container-1-cell-3">
+                <h3>
+                    <script>
+                        document.write(now)
+                    </script>
+                </h3>
+            </div>
+        </div> <!-- End of div for conatiner 1-->
+                    
+        <!-- Drop-down search menu -->
+        <div class="search-results">
+            <ul class="js-search-result">
+            </ul>
         </div>
-  
-        <!-- containter 2 -->
-        <div class="container-2">
 
-            <div class="cell" id="inner-cell-2-1">
-                <div class="container">
-                    <form>
-                      <input class="js-search-box" type="search" placeholder="search ticker or company" maxlength="18" font-size="24px">
-                    </form>
-                </div>
-            </div>
-      
-            <div class="cell" id="inner-cell-2-2">
-                <span class="data">
-                    <h5 class="date">
-                        <script>
-                            document.write(now)
-                        </script>
-                    </h5>
-                </span>
-            </div>
+        <!-- Light-dark theme swticher -->
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+            </label>
+        </div>
 
-        </div> <!-- end of container-2 div -->
-    </div> <!-- end of two-containers div -->
+        <div class="dark-light-icon">
+            <i class="fa-solid fa-circle-half-stroke fa-2x"></i>
+        </div>
 
-    <!-- drop-down search menu -->
-    <div class="search-results">
-        <ul class="js-search-result">
-        </ul>
-    </div>   
+        <!-- market status -->
 
-    <!-- market status -->
-
-    <script src="{{ url_for('static', filename='scripts/redgreen.js') }}"></script>
-    <script src="{{ url_for('static', filename='scripts/popup.js') }}"></script>
-    <script src="{{ url_for('static', filename='scripts/search.js') }}"></script>
-    <script src="{{ url_for('static', filename='lodash.js') }}"></script>
-</body>
+        <script src="{{ url_for('static', filename='scripts/light_dark_theme.js') }}"></script>
+        <script src="{{ url_for('static', filename='scripts/redgreen.js') }}"></script>
+        <script src="{{ url_for('static', filename='scripts/popup.js') }}"></script>
+        <script src="{{ url_for('static', filename='scripts/search.js') }}"></script>
+        <script src="{{ url_for('static', filename='lodash.js') }}"></script>
+    </body>
 </html>
