@@ -4,6 +4,8 @@
     --font-color: black;
     --font-color2: #f8f9fa;
     --brand-color: #f8f9fa;
+    --fa--primary: limegreen;
+    --fa--secondary: dimgray;
 }
 
 /* Dark theme colors */
@@ -12,6 +14,8 @@
     --font-color: #f8f9fa;
     --font-color2: black;
     --brand-color: black;
+    --fa--primary: limegreen;
+    --fa--secondary: lightgray;
 }
 
 .theme-switch-wrapper {
