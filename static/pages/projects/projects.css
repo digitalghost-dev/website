@@ -64,11 +64,25 @@ h3 {
     padding: 0 0 1rem 0.5rem;
 }
 
+h5 {
+    color: var(--font-color);
+    font-family: "Raleway", sans-serif;
+    font-size: 1rem;
+    font-weight: 100;
+    padding: 0 0 1rem 0.5rem;
+}
+
+p {
+    color: var(--font-color);
+    font-size: 0.8rem;
+}
+
+/* Python project list */
 .python-section {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: baseline;
+    align-items: center;
     padding-top: 3rem;
 }
 
@@ -77,55 +91,80 @@ h3 {
     color: #306998;
 }
 
-/* Python project list*/
 .python-project-list {
     margin: auto;
-    border-bottom: solid #DA1E37 3px;
-    width: 65%;
-}
-
-.list {
-    padding: 1rem 0 1rem 1rem;
-    border-bottom: solid dimgray 1px;
-    list-style-type: none;
-}
-
-.list:last-child {
-    border-bottom: none;
-}
-
-.list:hover {
-    background-color: rgba(173, 181, 189, 0.8);
-}
-
-.wrapper {
-    flex-direction: column;
-}
-
-.top-row {
     display: flex;
     flex-direction: row;
+    width: 90%;
+    border-bottom: solid #DA1E37 0.125rem;
 }
 
-h5 { 
-    font-family: "Raleway", sans-serif;
-    color: var(--font-color);
+@media screen and (max-width: 675px) {
+    .python-project-list {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        border-bottom: solid #DA1E37 0.125rem;
+    }
 }
 
-.top-row {
-    align-items: center;
+.first-python-project .second-python-project .third-python-project h3 {
+    padding-top: 0.5rem;
 }
 
-.top-row h5 {
-    font-size: 1.2rem;
-    padding-left: 0.5rem;
+button {
+    width: 150px;
+    padding: 12px;
+    border-radius: 20px;
+    color: white;
+    border: 3px solid #284cff;
+    cursor: pointer;
+    background: transparent;
+    background-image: url('https://web.archive.org/web/20160312084140im_/http://splatoon.nintendo.com/assets/img/nav-bg-fill-blue.png?1443460871');
+    background-repeat: repeat-x;
+    background-position: 0 -100%;
+    transition: 1s;
+    filter: hue-rotate(120deg);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5)
 }
 
-.bottom-row h5 {
-    font-weight: 100;
-    font-size: 0.8rem;
+button:hover{
+    background-position: center;
+    filter: hue-rotate(120deg);
+  }
+
+.first-python-project {
+    margin: auto;
+    height: 250px;
+    width: 250px;
+    text-align: center;
+    padding-top: 1rem;
 }
 
-.list-icon {
-    color: var(--font-color);
+/* Chart icon */
+.fa-chart-line-up {
+    --fa-primary-color: var(--fa--primary);
+    --fa-secondary-color: var(--fa--secondary);
+}
+
+.second-python-project {
+    margin: auto;
+    height: 250px;
+    width: 250px;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.third-python-project {
+    margin: auto;
+    height: 250px;
+    width: 250px;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.fa-wrench {
+    --fa-primary-color: var(--fa--primary);
+    --fa-secondary-color: var(--fa--secondary);
 }
