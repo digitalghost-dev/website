@@ -1,8 +1,8 @@
 <html>
 <head>
-    <link rel="icon" type="image/x-icon" href="https://storage.cloud.google.com/minimalfire-web-app_cloudbuild/favicon/thought-bubble-light.svg">
+    <link rel="icon" type="image/x-icon" href="https://storage.cloud.google.com/minimalfire-web-app_cloudbuild/favicon/fire-flame-curved-duotone.svg">
     <script src="https://kit.fontawesome.com/84587c6ecd.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Red Hat Mono">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway|Red Hat Mono">
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='pages/projects/projects.css') }}">
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='floating_button.css') }}">
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='light_dark_theme.css') }}">
@@ -11,13 +11,12 @@
     <title>Projects | christiansanchez.dev</title>
 </head>
 <body>
-    
-    <!-- start of floating menu button -->
+    <!-- floating menu button -->
     <div class="action" onclick="actionToggle();">
         <span><i style="padding-top: 10px;" class="fa-light fa-bars fa-2xs"></i></span>
         <ol>
-            <li><a style="text-decoration: none; color: #DA1E37" href="https://www.christiansanchez.dev/">Home</a></li>
-            <li><a style="text-decoration: none; color: #DA1E37" href="https://www.christiansanchez.dev/about">About</a></li>
+            <li><a style="text-decoration: none; color: #DA1E37" href="">Home</a></li>
+            <li><a style="text-decoration: none; color: #DA1E37" href="/about">About</a></li>
         </ol>
     </div>
     <script>
@@ -26,7 +25,6 @@
             action.classList.toggle('active')
         }
     </script>
-    <!-- end of floating menu button -->
 
     <div class="navbar">
         <h1>| Projects</h1>
@@ -47,6 +45,39 @@
         <i class="fa-brands fa-python fa-2x fa-fade"></i>
     </div>
 
+    <!-- Python project section -->
+    <div class="python-project-list">
+        
+        <div class="first-python-project">
+            <i class="fa-duotone fa-chart-line-up fa-2x"></i>
+            <h3>Stock Data</h3>
+            <h5>Search stocks to get insight on your favorite companies</h5>
+            <a href="https://www.christiansanchez.dev/projects">
+                <button>
+                    <p>Take me!</p>
+                </button>
+            </a>
+        </div>
+
+        <div class="second-python-project">
+            <i class="fa-duotone fa-wrench fa-2x"></i>
+            <h3>Under Construction...</h3>
+            <h5>Working on something new!</h5>
+            <button>
+                <p>I'll take you when I'm ready</p>
+            </button>
+        </div>
+
+        <div class="third-python-project">
+            <i class="fa-duotone fa-wrench fa-2x"></i>
+            <h3>Under Construction...</h3>
+            <h5>Working on something new!</h5>
+            <button>
+                <p>I'll take you when I'm ready</p>
+            </button>
+        </div>
+    </div>
+
     <!-- Dark theme switcher -->
     <div class="theme-switch-wrapper">
         <label class="theme-switch" for="checkbox">
@@ -58,58 +89,7 @@
     <div class="dark-light-icon">
         <i class="fa-solid fa-circle-half-stroke fa-2x"></i>
     </div>
-
-    <div class="python-project-list">
-        <ul>
-            <div class="list">
-                <a href="https://www.christiansanchez.dev/projects/search">
-                    <li>
-                        <div class="wrapper">
-                            <div class="top-row">
-                                <i class="list-icon fa-light fa-chart-line"></i>
-                                <h5>Stock Data</h5>
-                            </div>
-                            <div class="bottom-row">
-                                <h5>Search stocks to get insight on your favorite companies.</h5>
-                            </div>
-                        </div>
-                    </li>
-                </a>
-            </div>
-           
-            <div class="list">
-                <a href="">
-                    <li>
-                        <div class="wrapper">
-                            <div class="top-row">
-                                <i class="list-icon fa-light fa-wrench"></i>
-                                <h5>In the works</h5>
-                            </div>
-                            <div class="bottom-row">
-                                <h5>Working on something new...</h5>
-                            </div>
-                        </div>
-                    </li>
-                </a>
-            </div>
-            
-            <div class="list">
-                <a href="">
-                    <li>
-                        <div class="wrapper">
-                            <div class="top-row">
-                                <i class="list-icon fa-light fa-wrench"></i>
-                                <h5>In the works</h5>
-                            </div>
-                            <div class="bottom-row">
-                                <h5>Working on something new...</h5>
-                            </div>
-                        </div>
-                    </li>
-                </a>
-            </div>
-        </ul>
-    </div>
+    
 
     <script src="{{ url_for('static', filename='scripts/light_dark_theme.js') }}"></script>
 
