@@ -1,3 +1,7 @@
+body {
+    overflow: hidden;
+}
+
 .navbar {
     display: flex;
     flex-direction: row;
