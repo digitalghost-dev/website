@@ -1,21 +1,117 @@
-body {
-    background-color: black;
+:root {
+    --card-height: 320px;
+    --card-width: 225px;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 4rem;
+    padding: 1rem 0rem 1rem 0rem;
+    background-color: #DA1E37;
+    width: 100%;
+}
+
+.fa-brands {
+    color: var(--brand-color);
+}
+
+.under-navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.breadtrail {
+    padding-right: 0.7rem;
+    font-size: 0.8rem;
+    font-family: "Red Hat Mono", sans-serif;
+    text-align: left;
+    color: var(--font-color);
+}
+
+a {
+    text-decoration: none;
+    color: #DA1E37;
 }
 
 h1 {
-    color: white;
-    font-family: Montserrat, sans-serif;
-}
-
-.fa-wrench {
-    color: white;
+    padding: 0.5rem 0 0 2rem;
+    font-family: "Open Sans", sans-serif;
+    font-size: 4rem;
+    border-bottom: 1px black solid;
 }
 
 .intro {
-    padding-top: 5rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+}
+
+img {
+    height: 220px;
+    width: 220px;
+}
+
+.dot {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    background-color: black;
+    margin-top: -220px;
+    margin-left: -15px;
+    z-index: -1;
+}
+
+.intro-text {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+}
+
+h2 {
+    font-family: "Open Sans", sans-serif;
+    color: #DA1E37;
+    border-bottom: 1px black solid;
+}
+
+p {
+    font-family: "Red Hat Mono", Courier, monospace;
+}
+
+hr {
+    
+    border: 2px dashed dimgray;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 3rem 0 3rem 0;
+}
+
+.card-1, .card-2, .card-3 {
+    height: var(--card-height);
+    width: var(--card-width);
+    border-radius: 5%;
+    border: solid black;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(0, 0, 0, 0.5) 50%,
+        #fff 50%,
+        #fff 100%
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.4);
+}
+
+h3 {
+    font-family: "Open Sans", sans-serif;
 }
