@@ -1,31 +1,17 @@
 <html>
     <head>
-        <link rel="icon" type="image/x-icon" href="https://storage.cloud.google.com/minimalfire-web-app_cloudbuild/favicon/thought-bubble-light.svg">
+        <link rel="icon" type="image/x-icon" href="https://storage.cloud.google.com/minimalfire-web-app_cloudbuild/favicon/fire-flame-curved-duotone.svg">
         <script src="https://kit.fontawesome.com/84587c6ecd.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway|Red Hat Mono">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans|Red Hat Mono">
         <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='pages/home/home.css') }}">
         <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='floating_button.css') }}">
+        <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='floating_icons.css') }}">
         <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='light_dark_theme.css') }}">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
         <title>Home | christiansanchez.dev</title>
     </head>
     <body>
-
-        <!-- Start of floating menu button -->
-        <div class="action" onclick="actionToggle();">
-            <span><i style="padding-top: 0.5rem;" class="fa-light fa-bars fa-2xs"></i></span>
-            <ol>
-                <li><a style="text-decoration: none; color: #DA1E37" href="https://www.christiansanchez.dev/about">About</a></li>
-                <li><a style="text-decoration: none; color: #DA1E37" href="https://www.christiansanchez.dev/projects">Projects</a></li>
-            </ol>
-        </div>
-        <script>
-            function actionToggle(){
-                var action = document.querySelector('.action');
-                action.classList.toggle('active')
-            }
-        </script>
 
         <!-- Top portion of page -->
         <div class="navbar">
@@ -62,6 +48,21 @@
                 <li><i class="fa-light fa-hand-horns fa-3x"></i></li>
             </ul>
         </div>
+
+        <!-- Start of floating menu button -->
+        <div class="action" onclick="actionToggle();">
+            <span><i style="padding-top: 0.5rem;" class="fa-light fa-bars fa-2xs"></i></span>
+            <ol>
+                <li><a class="menu-link" href="https://www.christiansanchez.dev/about">About</a></li>
+                <li><a class="menu-link" href="https://www.christiansanchez.dev/projects">Projects</a></li>
+            </ol>
+        </div>
+        <script>
+            function actionToggle(){
+                var action = document.querySelector('.action');
+                action.classList.toggle('active')
+            }
+        </script>
 
         <!-- Light-dark theme swticher -->
         <div class="theme-switch-wrapper">
