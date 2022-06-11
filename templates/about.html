@@ -1,18 +1,109 @@
 <html>
 <head>
-    <link rel="icon" type="image/x-icon" href="https://storage.cloud.google.com/minimalfire-web-app_cloudbuild/favicon/thought-bubble-light.svg">
+    <link rel="icon" type="image/x-icon" href="https://storage.cloud.google.com/minimalfire-web-app_cloudbuild/favicon/fire-flame-curved-duotone.svg">
     <script src="https://kit.fontawesome.com/84587c6ecd.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Red Hat Mono">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans|Red Hat Mono">
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='pages/about/about.css') }}">
-    
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='floating_button.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='light_dark_theme.css') }}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <title>About | christiansanchez.dev</title>
 </head>
 <body>
-    <div class="intro">
-        <h1>This page is currently under contruction</h1>
-        <i class="fa-thin fa-wrench fa-3x"></i>
+
+    <!-- Top portion of page -->
+    <div>
+        <div class="navbar">
+            <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/csanchezdev/">
+                <i class="fa-brands fa-twitter fa-3x"></i>
+            </a>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/christian-sanchez-nv/">
+                <i class="fa-brands fa-linkedin fa-3x"></i>
+            </a>
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/SquareHammer89/minimalfire-web-app">
+                <i class="fa-brands fa-github fa-3x"></i>
+            </a>
+        </div>
+        <div class="under-navbar">
+            <!-- Page title -->
+            <div>
+                <h1>About</h1>
+            </div>
+            <!-- Breadtrail -->
+            <div class="breadtrail">
+                <a href="/">home</a> > about
+            </div>
+        </div>
     </div>
+
+    <!-- Introduction section -->
+    <div class="intro">
+        <div class="profile">
+            <img src="https://storage.googleapis.com/us.artifacts.minimalfire-web-app.appspot.com/memoji.PNG">
+            <div class="dot"></div>
+        </div>
+        <div class="intro-text">
+            <h2>
+                Curious to learn more?
+            </h2>
+            <p>
+                Click on one of the tiles below<br>to view more info about<br>me, my career, or this website!
+            </p>
+        </div>
+    </div>
+    
+
+    <!-- Card section with links to related section -->
+    <div class="cards">
+        <div class="card-1">
+            <i class="fa-duotone fa-user-hair fa-5x"></i>
+            <h3>
+                About me
+            </h3>
+        </div>
+        <div class="card-2">
+            <i class="fa-duotone fa-briefcase fa-5x"></i>
+            <h3>
+                My Career
+            </h3>
+        </div>
+        <div class="card-3">
+            <i class="fa-duotone fa-browser fa-5x"></i>
+            <h3>
+                About the website
+            </h3>
+        </div>
+    </div>
+
+    <!-- Start of floating menu button -->
+    <div class="action" onclick="actionToggle();">
+        <span><i style="padding-top: 0.5rem;" class="fa-light fa-bars fa-2xs"></i></span>
+        <ol>
+            <li><a style="text-decoration: none; color: #DA1E37" href="https://www.christiansanchez.dev/about">About</a></li>
+            <li><a style="text-decoration: none; color: #DA1E37" href="https://www.christiansanchez.dev/projects">Projects</a></li>
+        </ol>
+    </div>
+    <script>
+        function actionToggle(){
+            var action = document.querySelector('.action');
+            action.classList.toggle('active')
+        }
+    </script>
+
+    <!-- Light-dark theme swticher -->
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+        </label>
+    </div>
+
+    <div class="dark-light-icon">
+        <i class="fa-solid fa-circle-half-stroke fa-2x"></i>
+    </div>
+
+    <script src="{{ url_for('static', filename='scripts/light_dark_theme.js') }}"></script>
+    
 </body>
 </html>
