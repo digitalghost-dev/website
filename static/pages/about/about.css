@@ -3,44 +3,69 @@
     --card-width: 225px;
 }
 
+body {
+    background-color: var(--background-color);
+}
+
 .navbar {
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 4rem;
     padding: 1rem 0rem 1rem 0rem;
-    background-color: #DA1E37;
+    background-color: var(--navbar-menu-slider-background-color);
     width: 100%;
 }
 
 .fa-brands {
-    color: var(--brand-color);
+    color: #F8F9FA;
 }
 
 .under-navbar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    background-color: var(--background-color);
 }
 
-.breadtrail {
+.breadcrumb {
     padding-right: 0.7rem;
     font-size: 0.8rem;
-    font-family: "Red Hat Mono", sans-serif;
     text-align: left;
-    color: var(--font-color);
 }
 
-a {
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+}
+  
+ul.breadcrumb li {
+    display: inline;
+    font-size: 1rem;
+    font-family: "Opens Sans", sans-serif;
+}
+  
+ul.breadcrumb li+li:before {
+    color: var(--font-color);
+    content: "/\00a0";
+}
+
+ul.breadcrumb li a {
+    color: var(--hyperlink);
     text-decoration: none;
-    color: #DA1E37;
+}
+
+ul.breadcrumb li a:hover {
+    
+    text-decoration: underline;
 }
 
 h1 {
     padding: 0.5rem 0 0 2rem;
     font-family: "Open Sans", sans-serif;
     font-size: 4rem;
-    border-bottom: 1px black solid;
+    border-bottom: solid var(--navbar-menu-slider-background-color) 3px;
+    color: var(--font-color);
 }
 
 .intro {
@@ -48,6 +73,8 @@ h1 {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    background-color: var(--background-color);
+    padding-bottom: 50px;
 }
 
 img {
@@ -73,45 +100,88 @@ img {
 
 h2 {
     font-family: "Open Sans", sans-serif;
-    color: #DA1E37;
-    border-bottom: 1px black solid;
+    color: var(--font-color3);
+    border-bottom: solid var(--navbar-menu-slider-background-color) 3px;
 }
 
 p {
     font-family: "Red Hat Mono", Courier, monospace;
+    color: var(--font-color);
 }
 
-hr {
-    
-    border: 2px dashed dimgray;
+.wrap-collabsible, .wrap-collabsible2, .wrap-collabsible3 {
+    margin-bottom: 1.2rem 0;
 }
-
-.cards {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 3rem 0 3rem 0;
+  
+input[type='checkbox'] {
+    display: none;
 }
-
-.card-1, .card-2, .card-3 {
-    height: var(--card-height);
-    width: var(--card-width);
-    border-radius: 5%;
-    border: solid black;
-    background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.5) 0%,
-        rgba(0, 0, 0, 0.5) 50%,
-        #fff 50%,
-        #fff 100%
-    );
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.4);
-}
-
-h3 {
+  
+.lbl-toggle,
+.lbl-toggle2,
+.lbl-toggle3 {
+    display: block;
     font-family: "Open Sans", sans-serif;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 1rem;
+    color: #F8F9FA;
+    background: var(--navbar-menu-slider-background-color);
+    cursor: pointer;
+    transition: all 0.25s ease-out;
+}
+
+.lbl-toggle:hover,
+.lbl-toggle2:hover,
+.lbl-toggle3:hover {
+    background: var(--opacity-background);
+}
+  
+.lbl-toggle::before,
+.lbl-toggle2::before,
+.lbl-toggle3::before {
+    content: ' ';
+    display: inline-block;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid currentColor;    
+    vertical-align: middle;
+    margin-right: .7rem;
+    transform: translateY(-2px);
+    transition: transform .2s ease-out;
+}
+  
+.toggle:checked + .lbl-toggle::before,
+.toggle2:checked + .lbl-toggle2::before,
+.toggle3:checked + .lbl-toggle3::before   {
+    transform: rotate(90deg) translateX(-3px);
+}
+  
+.collapsible-content,
+.collapsible-content2,
+.collapsible-content3 {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height .25s ease-in-out;
+}
+  
+.toggle:checked + .lbl-toggle + .collapsible-content,
+.toggle2:checked + .lbl-toggle2 + .collapsible-content2,
+.toggle3:checked + .lbl-toggle3 + .collapsible-content3
+ {
+    max-height: 100vh;
+}
+  
+.toggle:checked + .lbl-toggle,
+.toggle2:checked + .lbl-toggle2,
+.toggle3:checked + .lbl-toggle3 {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+  
+.collapsible-content .content-inner,
+.collapsible-content2 .content-inner2,
+.collapsible-content3 .content-inner3 {
+    background: var(--opacity-background);
+    padding: .5rem 1rem;
 }
