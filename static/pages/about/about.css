@@ -1,8 +1,3 @@
-:root {
-    --card-height: 320px;
-    --card-width: 225px;
-}
-
 body {
     background-color: var(--background-color);
 }
