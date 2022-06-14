@@ -2,18 +2,24 @@
 :root {
     --background-color: #F8F9FA;
     --navbar-menu-slider-background-color: #DA1E37;
+    --opacity-background: rgba(218, 30, 55, 0.6);
     --box-shadow: rgba(0, 0, 0, 0.5);
     --font-color: black;
     --font-color2: #F8F9FA;
+    --font-color3: #DA1E37;
+    --hyperlink: #DA1E37;
 }
 
 /* Dark theme colors */
 [data-theme="dark"] {
     --background-color: rgba(19, 27, 39);
     --navbar-menu-slider-background-color: rgba(31, 41, 70);
+    --opacity-background: rgba(31, 41, 70, 0.6);
     --box-shadow: rgba(90, 90, 90, 0.9);
     --font-color: #F8F9FA;
     --font-color2: black;
+    --font-color3: #F8F9FA;
+    --hyperlink: rgb(52, 85, 173);
 }
 
 .theme-switch-wrapper {
