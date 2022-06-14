@@ -31,8 +31,11 @@
                 <h1>About</h1>
             </div>
             <!-- Breadtrail -->
-            <div class="breadtrail">
-                <a href="/">home</a> > about
+            <div class="breadcrumb">
+                <ul class="breadcrumb">
+                    <li><a href="#">home</a></li>
+                    <li style="color:var(--font-color);">about</li>
+                </ul>
             </div>
         </div>
     </div>
@@ -48,31 +51,43 @@
                 Curious to learn more?
             </h2>
             <p>
-                Click on one of the tiles below<br>to view more info about<br>me, my career, or this website!
+                Click on one of the dropdowns<br>below to view more info about<br>me, my career, or this website!
             </p>
         </div>
     </div>
-    
 
-    <!-- Card section with links to related section -->
-    <div class="cards">
-        <div class="card-1">
-            <i class="fa-duotone fa-user-hair fa-5x"></i>
-            <h3>
-                About me
-            </h3>
+    <!--Collapsible list -->
+    <div class="wrap-collabsible">
+        <input id="collapsible" class="toggle" type="checkbox">
+        <label for="collapsible" class="lbl-toggle">About me</label>
+        <div class="collapsible-content">
+            <div class="content-inner">
+                <p>
+                    placeholder
+                </p>
+            </div>
         </div>
-        <div class="card-2">
-            <i class="fa-duotone fa-briefcase fa-5x"></i>
-            <h3>
-                My Career
-            </h3>
+    </div>
+    <div class="wrap-collabsible2">
+        <input id="collapsible2" class="toggle2" type="checkbox">
+        <label for="collapsible2" class="lbl-toggle2">My Career</label>
+        <div class="collapsible-content2">
+            <div class="content-inner2">
+                <p>
+                    placeholder
+                </p>
+            </div>
         </div>
-        <div class="card-3">
-            <i class="fa-duotone fa-browser fa-5x"></i>
-            <h3>
-                About the website
-            </h3>
+    </div>
+    <div class="wrap-collabsible3">
+        <input id="collapsible3" class="toggle3" type="checkbox">
+        <label for="collapsible3" class="lbl-toggle3">About this site</label>
+        <div class="collapsible-content3">
+            <div class="content-inner3">
+                <p>
+                    placeholder
+                </p>
+            </div>
         </div>
     </div>
 
@@ -80,8 +95,8 @@
     <div class="action" onclick="actionToggle();">
         <span><i style="padding-top: 0.5rem;" class="fa-light fa-bars fa-2xs"></i></span>
         <ol>
-            <li><a style="text-decoration: none; color: #DA1E37" href="https://www.christiansanchez.dev/about">About</a></li>
-            <li><a style="text-decoration: none; color: #DA1E37" href="https://www.christiansanchez.dev/projects">Projects</a></li>
+            <li><a class="menu-link" href="https://www.christiansanchez.dev/about">About</a></li>
+            <li><a class="menu-link" href="https://www.christiansanchez.dev/projects">Projects</a></li>
         </ol>
     </div>
     <script>
