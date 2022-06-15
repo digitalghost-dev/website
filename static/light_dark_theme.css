@@ -28,25 +28,25 @@
 }
 
 .theme-switch {
+    position: fixed;
     display: inline-block;
     height: 34px;
-    position: fixed;
     width: 60px;
-    top: 90%;
-    right: 55px;
+    bottom: 50px;
+    right: 50px;
 }
 .theme-switch input {
     display: none;
 }
 
 .slider {
-    background-color: #ccc;
-    bottom: 0;
-    cursor: pointer;
-    left: 0;
     position: absolute;
-    right: 0;
+    background-color: #ccc;
     top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
     transition: .4s;
 }
 
@@ -79,7 +79,7 @@ input:checked + .slider:before {
 
 .dark-light-icon {
     position: fixed;
-    top: 90%;
+    bottom: 50px;
     right: 16px;
     color: var(--font-color);
 }
