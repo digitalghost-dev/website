@@ -2,59 +2,6 @@ body {
     background-color: var(--background-color);
 }
 
-.navbar {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 4rem;
-    padding: 1rem 0rem 1rem 0rem;
-    background-color: var(--navbar-menu-slider-background-color);
-    width: 100%;
-}
-
-.fa-brands {
-    color: #F8F9FA;
-}
-
-.under-navbar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: var(--background-color);
-}
-
-.breadcrumb {
-    padding-right: 0.7rem;
-    font-size: 0.8rem;
-    text-align: left;
-}
-
-ul.breadcrumb {
-    padding: 10px 16px;
-    list-style: none;
-}
-  
-ul.breadcrumb li {
-    display: inline;
-    font-size: 1rem;
-    font-family: "Opens Sans", sans-serif;
-}
-  
-ul.breadcrumb li+li:before {
-    color: var(--font-color);
-    content: "/\00a0";
-}
-
-ul.breadcrumb li a {
-    color: var(--lighter-blue);
-    text-decoration: none;
-}
-
-ul.breadcrumb li a:hover {
-    
-    text-decoration: underline;
-}
-
 h1 {
     padding: 0.5rem 0 0 2rem;
     font-family: "Open Sans", sans-serif;
