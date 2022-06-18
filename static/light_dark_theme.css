@@ -7,7 +7,7 @@
     --font-color: black;
     --font-color2: #F8F9FA;
     --font-color3: #DA1E37;
-    --hyperlink: #DA1E37;
+    --lighter-blue: #DA1E37;
 }
 
 /* Dark theme colors */
@@ -19,7 +19,7 @@
     --font-color: #F8F9FA;
     --font-color2: black;
     --font-color3: #F8F9FA;
-    --hyperlink: rgb(52, 85, 173);
+    --lighter-blue: rgb(52, 85, 173);
 }
 
 .theme-switch-wrapper {
