@@ -2,8 +2,10 @@
 <head>
     <link rel="icon" type="image/x-icon" href="https://storage.cloud.google.com/minimalfire-web-app_cloudbuild/favicon/fire-flame-curved-duotone.svg">
     <script src="https://kit.fontawesome.com/84587c6ecd.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway|Red Hat Mono">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans|Red Hat Mono">
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='pages/projects/projects.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='pages/projects/cards.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='navbar.css') }}">
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='floating_button.css') }}">
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='light_dark_theme.css') }}">
     <meta charset="UTF-8">
@@ -11,32 +13,39 @@
     <title>Projects | christiansanchez.dev</title>
 </head>
 <body>
-    <!-- floating menu button -->
-    <div class="action" onclick="actionToggle();">
-        <span><i style="padding-top: 10px;" class="fa-light fa-bars fa-2xs"></i></span>
-        <ol>
-            <li><a style="text-decoration: none; color: #DA1E37" href="">Home</a></li>
-            <li><a style="text-decoration: none; color: #DA1E37" href="/about">About</a></li>
-        </ol>
-    </div>
-    <script>
-        function actionToggle(){
-            var action = document.querySelector('.action');
-            action.classList.toggle('active')
-        }
-    </script>
 
-    <div class="navbar">
-        <h1>| Projects</h1>
+    <!-- Top portion of page -->
+    <div>
+        <div class="navbar">
+            <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/csanchezdev/">
+                <i class="fa-brands fa-twitter fa-3x"></i>
+            </a>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/christian-sanchez-nv/">
+                <i class="fa-brands fa-linkedin fa-3x"></i>
+            </a>
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/SquareHammer89/minimalfire-web-app">
+                <i class="fa-brands fa-github fa-3x"></i>
+            </a>
+        </div>
+        <div class="under-navbar">
+            <div class="breadcrumb">
+                <ul class="breadcrumb">
+                    <li><a href="www.christiansanchez.dev">home</a></li>
+                    <li style="color:var(--font-color);">projects</li>
+                </ul>
+            </div>
+        </div>
     </div>
-
-    <!-- Breadtrail -->
-    <div class="breadtrail"><a href="/">home</a> > projects</div>
 
     <!-- Welcome message -->
     <div class="introduction-message">
-        <h2>Welcome to my projects page!</h2>
-        <h4>Here are all of my projects that I've built or are currently being built.</h4>
+        <div class="welcome-text">    
+            <h2>Welcome to my <div class="accent">projects page!</div></h2>
+            <h4>Here are all of my projects that I've built<br>or are currently being built.</h4>
+        </div>
+        <div>
+            <img src="https://storage.googleapis.com/us.artifacts.minimalfire-web-app.appspot.com/carbon-2.png">
+        </div>
     </div>
 
     <!-- Python title section -->
@@ -45,38 +54,37 @@
         <i class="fa-brands fa-python fa-2x fa-fade"></i>
     </div>
 
-    <!-- Python project section -->
-    <div class="python-project-list">
+    <div class="card-container">
+        <div class="card card-1">
+            <h3 class="title">Stock Data</h3>
+            <p>This project is like a<br>search engine for<br>stocks!</p>
+        </div>
+
+        <div class="card card-2">
+            <h3 class="title">In the works</h3>
+            <p>Working on<br>something new...</p>
+        </div>
         
-        <div class="first-python-project">
-            <i class="fa-duotone fa-chart-line-up fa-2x"></i>
-            <h3>Stock Data</h3>
-            <h5>Search stocks to get insight on your favorite companies</h5>
-            <a href="https://www.christiansanchez.dev/projects">
-                <button>
-                    <p>Take me!</p>
-                </button>
-            </a>
-        </div>
-
-        <div class="second-python-project">
-            <i class="fa-duotone fa-wrench fa-2x"></i>
-            <h3>Under Construction...</h3>
-            <h5>Working on something new!</h5>
-            <button>
-                <p>I'll take you when I'm ready</p>
-            </button>
-        </div>
-
-        <div class="third-python-project">
-            <i class="fa-duotone fa-wrench fa-2x"></i>
-            <h3>Under Construction...</h3>
-            <h5>Working on something new!</h5>
-            <button>
-                <p>I'll take you when I'm ready</p>
-            </button>
+        <div class="card card-3">
+            <h3 class="title">In the works</h3>
+            <p>Working on<br>something new...</p>
         </div>
     </div>
+
+    <!-- floating menu button -->
+    <div class="action" onclick="actionToggle();">
+        <span><i style="padding-top: 10px;" class="fa-light fa-bars fa-2xs"></i></span>
+        <ol>
+            <li><a style="text-decoration: none; color: #DA1E37" href="www.christiansanchez.dev/about">About</a></li>
+            <li><a style="text-decoration: none; color: #DA1E37" href="www.christiansanchez.dev">Home</a></li>
+        </ol>
+    </div>
+    <script>
+        function actionToggle(){
+            var action = document.querySelector('.action');
+            action.classList.toggle('active')
+        }
+    </script>
 
     <!-- Dark theme switcher -->
     <div class="theme-switch-wrapper">
