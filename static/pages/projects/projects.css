@@ -2,63 +2,86 @@ body {
     background-color: var(--background-color);
 }
 
-.navbar {
-    background-color: #DA1E37;
-    padding: 1rem 0rem 1rem 0rem;
-    width: 100%;
-}
+/* navbar section is in the file '/static/navbar.css */
 
-a {
-    text-decoration: none;
-}
-
-/* Page title */
-h1 {
-    color: var(--font-color2);
-    font-family: "Raleway", sans-serif;
-    text-align: center;
-}
-
-.breadtrail {
-    padding-left: 0.5rem;
-    font-size: 0.8rem;
-    font-family: "Red Hat Mono", sans-serif;
-    text-align: left;
-    color: var(--font-color);
-}
-
-a {
-    color: #DA1E37;
-}
-
+/* Welcome to my projects page! */
 .introduction-message {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
+
+@media screen and (max-width: 900px) {
+    .introduction-message {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.welcome-text {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding-top: 3rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 5%;
 }
 
-/* Text above python project section */
+@media screen and (max-width: 900px) {
+    .welcome-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding-top: 5%;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    img {
+        transform: translateX(30px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    img {
+        width: 380px;
+    }
+}
+
 h2 {
     color: var(--font-color);
-    font-family: "Raleway", sans-serif;
-    font-size: 2rem;
-    font-weight: 100;
-    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+}
+
+.accent {
+    color: var(--lighter-blue);
 }
 
 h4 {
     color: var(--font-color);
-    font-family: "Raleway", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 1rem;
     font-weight: 100;
-    text-align: center;
+}
+
+/* Text above python project section */
+h3 {
+    color: var(--font-color);
+    font-family: "Open Sans", sans-serif;
+    font-size: 2rem;
+    font-weight: 100;
 }
 
 /* Python project section title */
 h3 {
     color: var(--font-color);
-    font-family: "Raleway", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 1.5rem;
     font-weight: 100;
     padding: 0 0 1rem 0.5rem;
@@ -66,15 +89,18 @@ h3 {
 
 h5 {
     color: var(--font-color);
-    font-family: "Raleway", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 1rem;
     font-weight: 100;
     padding: 0 0 1rem 0.5rem;
 }
 
 p {
+    padding-left: 0.5rem;
     color: var(--font-color);
     font-size: 0.8rem;
+    text-align: left !important;
+    width: 90%;
 }
 
 /* Python project list */
@@ -82,89 +108,12 @@ p {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: baseline;
     padding-top: 3rem;
+    overflow-x: auto;
 }
 
 .fa-python {
     padding-left: 0.5rem;
-    color: #306998;
-}
-
-.python-project-list {
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    width: 90%;
-    border-bottom: solid #DA1E37 0.125rem;
-}
-
-@media screen and (max-width: 675px) {
-    .python-project-list {
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        width: 90%;
-        border-bottom: solid #DA1E37 0.125rem;
-    }
-}
-
-.first-python-project .second-python-project .third-python-project h3 {
-    padding-top: 0.5rem;
-}
-
-button {
-    width: 150px;
-    padding: 12px;
-    border-radius: 20px;
-    color: white;
-    border: 3px solid #284cff;
-    cursor: pointer;
-    background: transparent;
-    background-image: url('https://web.archive.org/web/20160312084140im_/http://splatoon.nintendo.com/assets/img/nav-bg-fill-blue.png?1443460871');
-    background-repeat: repeat-x;
-    background-position: 0 -100%;
-    transition: 1s;
-    filter: hue-rotate(120deg);
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5)
-}
-
-button:hover{
-    background-position: center;
-    filter: hue-rotate(120deg);
-  }
-
-.first-python-project {
-    margin: auto;
-    height: 250px;
-    width: 250px;
-    text-align: center;
-    padding-top: 1rem;
-}
-
-/* Chart icon */
-.fa-chart-line-up {
-    --fa-primary-color: var(--fa--primary);
-    --fa-secondary-color: var(--fa--secondary);
-}
-
-.second-python-project {
-    margin: auto;
-    height: 250px;
-    width: 250px;
-    text-align: center;
-    padding-top: 1rem;
-}
-
-.third-python-project {
-    margin: auto;
-    height: 250px;
-    width: 250px;
-    text-align: center;
-    padding-top: 1rem;
-}
-
-.fa-wrench {
-    --fa-primary-color: var(--fa--primary);
-    --fa-secondary-color: var(--fa--secondary);
+    color: #306998 !important;
 }
