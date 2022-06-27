@@ -1,7 +1,7 @@
 # About
 ***DISCLAIMER:*** I am not a financial advisor, any financial tools found on my website are for educational purposes **only**, and should not be taken as investment advice.
 
-This repository holds the code for my website: [www.christiansanchez.dev](https://www.christiansanchez.dev)
+This repository holds the code for my website: [www.digitalghost.dev](https://www.digitalghost.dev)
 
 This is my first major coding project that I've undertaken.
 
