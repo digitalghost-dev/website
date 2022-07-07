@@ -33,8 +33,6 @@
     background-color: #17141d;
     border-radius: 10px;
     box-shadow: -1rem 0 3rem #000;
-    border-left: solid dimgray 1px;
-    border-bottom: solid dimgray 1px;
     transition: 0.4s ease-out;
     position: relative;
 }
