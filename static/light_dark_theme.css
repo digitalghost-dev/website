@@ -62,7 +62,7 @@
 }
 
 input:checked + .slider {
-    background-color: var(--navbar-menu-slider-background-color);
+    background-color: #ccc;
 }
 
 input:checked + .slider:before {
