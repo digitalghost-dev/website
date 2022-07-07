@@ -2,10 +2,12 @@ body {
     background-color: var(--background-color);
 }
 
+/* navbar section is in the file '/static/navbar.css */
+
 h1 {
     padding: 0.5rem 0 0 2rem;
     font-family: "Open Sans", sans-serif;
-    font-size: 4rem;
+    font-size: 2.8rem;
     border-bottom: solid var(--navbar-menu-slider-background-color) 3px;
     color: var(--font-color);
 }
@@ -55,11 +57,11 @@ img {
 h2 {
     font-family: "Open Sans", sans-serif;
     color: var(--font-color3);
+    padding-bottom: 0.5rem;
     border-bottom: solid var(--navbar-menu-slider-background-color) 3px;
 }
 
-p {
-    font-family: "Red Hat Mono", Courier, monospace;
+.info-text {
     color: var(--font-color);
 }
 
@@ -71,9 +73,7 @@ input[type='checkbox'] {
     display: none;
 }
   
-.lbl-toggle,
-.lbl-toggle2,
-.lbl-toggle3 {
+.lbl-toggle, .lbl-toggle2, .lbl-toggle3 {
     display: block;
     font-family: "Open Sans", sans-serif;
     font-size: 1.2rem;
@@ -85,15 +85,11 @@ input[type='checkbox'] {
     transition: all 0.25s ease-out;
 }
 
-.lbl-toggle:hover,
-.lbl-toggle2:hover,
-.lbl-toggle3:hover {
+.lbl-toggle:hover, .lbl-toggle2:hover, .lbl-toggle3:hover {
     background: var(--opacity-background);
 }
   
-.lbl-toggle::before,
-.lbl-toggle2::before,
-.lbl-toggle3::before {
+.lbl-toggle::before, .lbl-toggle2::before, .lbl-toggle3::before {
     content: ' ';
     display: inline-block;
     border-top: 5px solid transparent;
@@ -111,9 +107,7 @@ input[type='checkbox'] {
     transform: rotate(90deg) translateX(-3px);
 }
   
-.collapsible-content,
-.collapsible-content2,
-.collapsible-content3 {
+.collapsible-content, .collapsible-content2, .collapsible-content3 {
     max-height: 0px;
     overflow: hidden;
     transition: max-height .25s ease-in-out;
@@ -123,7 +117,7 @@ input[type='checkbox'] {
 .toggle2:checked + .lbl-toggle2 + .collapsible-content2,
 .toggle3:checked + .lbl-toggle3 + .collapsible-content3
  {
-    max-height: 100vh;
+    max-height: 1000px;
 }
   
 .toggle:checked + .lbl-toggle,
@@ -131,11 +125,4 @@ input[type='checkbox'] {
 .toggle3:checked + .lbl-toggle3 {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
-}
-  
-.collapsible-content .content-inner,
-.collapsible-content2 .content-inner2,
-.collapsible-content3 .content-inner3 {
-    background: var(--opacity-background);
-    padding: .5rem 1rem;
 }
