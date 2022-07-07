@@ -1,9 +1,12 @@
 <html>
 <head>
-    <link rel="icon" type="image/x-icon" href="https://storage.cloud.google.com/minimalfire-web-app_cloudbuild/favicon/fire-flame-curved-duotone.svg">
+    <link rel="icon" type="image/x-icon" href="https://storage.googleapis.com/personal-website-nv-bucket/ghost-regular.svg">
     <script src="https://kit.fontawesome.com/84587c6ecd.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans|Red Hat Mono">
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='pages/about/about.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='pages/about/sections/me.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='pages/about/sections/timeline.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='pages/about/sections/website.css') }}">
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='navbar.css') }}">
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='floating_button.css') }}">
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='light_dark_theme.css') }}">
@@ -27,9 +30,13 @@
             </a>
         </div>
         <div class="under-navbar">
+            <!-- Page title -->
+            <div>
+                <h1>About</h1>
+            </div>
             <div class="breadcrumb">
                 <ul class="breadcrumb">
-                    <li><a href="#">home</a></li>
+                    <li><a href="www.christiansanchez.dev">home</a></li>
                     <li style="color:var(--font-color);">about</li>
                 </ul>
             </div>
@@ -39,14 +46,14 @@
     <!-- Introduction section -->
     <div class="intro">
         <div class="profile">
-            <img src="https://storage.googleapis.com/us.artifacts.minimalfire-web-app.appspot.com/memoji.PNG">
+            <img src="https://storage.googleapis.com/personal-website-nv-bucket/memoji.PNG">
             <div class="dot"></div>
         </div>
         <div class="intro-text">
             <h2>
                 Curious to learn more?
             </h2>
-            <p>
+            <p class="info-text" style="padding-top: 0.25rem;">
                 Click on one of the dropdowns<br>below to view more info about<br>me, my career, or this website!
             </p>
         </div>
@@ -55,34 +62,176 @@
     <!--Collapsible list -->
     <div class="wrap-collabsible">
         <input id="collapsible" class="toggle" type="checkbox">
-        <label for="collapsible" class="lbl-toggle">About me</label>
+        <label for="collapsible" class="lbl-toggle">Interests</label>
         <div class="collapsible-content">
             <div class="content-inner">
-                <p>
-                    placeholder
-                </p>
+                <div class="tile-1">
+                    <h3>Music</h3>
+                    <i class="fa-duotone fa-guitar-electric fa-5x"></i>
+                    <p class="black-text">
+                        I've been playing the drums for over 10 years! Recently picked up guitar as well.
+                    </p>
+                </div>
+                <div class="tile-2">
+                    <h3>Learning</h3>
+                    <i class="fa-duotone fa-brain-circuit fa-5x"></i>
+                    <p class="black-text">
+                        "Live as if you were to die tomorrow. Learn as if your were to live forever."
+                    </p>
+                </div>
+                <div class="tile-3">
+                    <h3>Finance</h3>
+                    <i class="fa-duotone fa-money-bill-1-wave fa-5x"></i>
+                    <p class="black-text">
+                        What good does earning money do if you don't know how to manage it?
+                    </p>
+                </div>
             </div>
         </div>
     </div>
     <div class="wrap-collabsible2">
         <input id="collapsible2" class="toggle2" type="checkbox">
-        <label for="collapsible2" class="lbl-toggle2">My Career</label>
+        <label for="collapsible2" class="lbl-toggle2">Career</label>
         <div class="collapsible-content2">
             <div class="content-inner2">
-                <p>
-                    placeholder
-                </p>
+                <div class="timeline-area">
+                    <div class="container">
+                        <div class="timelines">
+                            <h3>Career Timeline</h3>
+                        </div>
+                        <div class="all-timelines">
+                            <div class="single-timeline d-flex-2">
+                                <div class="timeline-blank"></div>
+                                <div class="timeline-text d-flex-2">
+                                    <span>
+                                        <p>
+                                            July 2018 // Started my career as a Help Desk Intern I at International Game Technology.
+                                        </p>
+                                    </span>
+                                    <div class="t-square"></div>
+                                </div>
+                            </div>
+                            <div class="single-timeline d-flex-2">
+                                <div class="timeline-blank"></div>
+                                <div class="timeline-text d-flex-2">
+                                    <span>
+                                        <p>
+                                            December 2018 // Promoted to Help Desk Technician II.
+                                        </p>
+                                    </span>
+                                    <div class="t-square"></div>
+                                </div>
+                            </div>
+                            <div class="single-timeline d-flex-2">
+                                <div class="timeline-blank"></div>
+                                <div class="timeline-text d-flex-2">
+                                    <span>
+                                        <p>
+                                            February 2019 // Started university online to finish my bachelors.
+                                        </p>
+                                    </span>
+                                    <div class="t-square"></div>
+                                </div>
+                            </div>
+                            <div class="single-timeline d-flex-2">
+                                <div class="timeline-blank"></div>
+                                <div class="timeline-text d-flex-2">
+                                    <span>
+                                        <p>
+                                            February 2021 // Received LPI - Linux Foundations certification.
+                                        </p>
+                                    </span>
+                                    <div class="t-square"></div>
+                                </div>
+                            </div>
+                            <div class="single-timeline d-flex-2">
+                                <div class="timeline-blank"></div>
+                                <div class="timeline-text d-flex-2">
+                                    <span>
+                                        <p>
+                                            March 2021 // Completed my bachelors in Information Technology from Western Governors University.
+                                        </p>
+                                    </span>
+                                    <div class="t-square"></div>
+                                </div>
+                            </div>
+                            <div class="single-timeline d-flex-2">
+                                <div class="timeline-blank"></div>
+                                <div class="timeline-text d-flex-2">
+                                    <span>
+                                        <p>
+                                            May 2021 // Started a new role as a Coordinator of Technology <em>(IT Supervisor)</em> at the University of Nevada, Reno.
+                                        </p>
+                                    </span>
+                                    <div class="t-square"></div>
+                                </div>
+                            </div>
+                            <div class="single-timeline d-flex-2">
+                                <div class="timeline-blank"></div>
+                                <div class="timeline-text d-flex-2">
+                                    <span>
+                                        <p>
+                                            January 2022 // Received Google Data Analytics Certification.
+                                        </p>
+                                    </span>
+                                    <div class="t-square"></div>
+                                </div>
+                            </div>
+                            <div class="single-timeline d-flex-2">
+                                <div class="timeline-blank"></div>
+                                <div class="timeline-text d-flex-2">
+                                    <span>
+                                        <p>
+                                            February 2022 // Promoted to a Business Systems Analyst.
+                                        </p>
+                                    </span>
+                                    <div class="t-square"></div>
+                                </div>
+                            </div>
+                            <div class="single-timeline d-flex-2">
+                                <div class="timeline-blank"></div>
+                                <div class="timeline-text d-flex-2">
+                                    <span>
+                                        <p>
+                                            February 2022 // Promoted to a Business Systems Analyst.
+                                        </p>
+                                    </span>
+                                    <div class="t-square"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <!-- July 2022 // Received Google Cloud: Associate Cloud Engineer certification. -->
     <div class="wrap-collabsible3">
         <input id="collapsible3" class="toggle3" type="checkbox">
-        <label for="collapsible3" class="lbl-toggle3">About this site</label>
+        <label for="collapsible3" class="lbl-toggle3">Website</label>
         <div class="collapsible-content3">
             <div class="content-inner3">
-                <p>
-                    placeholder
-                </p>
+                <div class="tile-1">
+                    <h3>Cloud Hosted</h3>
+                    <i class="fa-duotone fa-cloud-check fa-5x"></i>
+                    <p class="black-text">
+                        My website is hosted on Google Cloud, built off of a Docker image.
+                    </p>
+                </div>
+                <div class="tile-2">
+                    <h3>Python</h3>
+                    <i class="fa-duotone fa-code fa-5x"></i>
+                    <p class="black-text">
+                        Built off of the Flask framework.
+                    </p>
+                </div>
+                <div class="tile-3">
+                    <h3>My Ideas</h3>
+                    <i class="fa-duotone fa-lightbulb-on fa-5x"></i>
+                    <p class="black-text">
+                        This website's main purpose is to showcase my projects.
+                    </p>
+                </div>
             </div>
         </div>
     </div>
