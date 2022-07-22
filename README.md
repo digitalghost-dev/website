@@ -18,7 +18,7 @@ I'm building this site as a platform to show off other projects that are focused
   * [GitHub Repository](https://github.com/digitalghost-dev/data-pipeline)
 
 ## Changelog
-* To keep the changelog simple, since my last one was too verbose, it will only hold version differences when a new page is added.
+To keep the changelog simple, since my last one was too verbose, it will only hold version differences when a new page is added.
 
 ### Version 1.0
 <sup>July 6th, 2022</sup>
